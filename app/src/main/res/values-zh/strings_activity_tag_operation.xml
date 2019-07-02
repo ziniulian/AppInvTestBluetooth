@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+	<!-- End 6C -->
+    <string name="title_tag_operation">6C标签操作</string>
+    <string name="label_tag_operation_tag_data">数据:</string>
+    <string name="label_tag_operation_tag_data_epc">EPC:</string>
+    <string name="label_tag_operation_tag_data_tid">TID:</string>
+    <string name="label_tag_operation_tag_data_userdata">Userdata</string>
+    
+    <string name="label_tag_operation_sub_title">操作</string>
+    <string name="text_tag_operation_write_epc">写EPC</string>
+    <string name="text_tag_operation_read_userdata">读用户数据</string>
+    <string name="text_tag_operation_write_userdata">写用户数据</string>
+    <string name="text_tag_operation_write_bank">写BANK</string>
+    <string name="text_tag_operation_clear_bank">擦BANK</string>
+    <string name="text_tag_operation_password_configurate">配置密码</string>
+    <string name="text_tag_operation_destroy_password">配置销毁密码</string>
+    <string name="text_tag_operation_lock_status">配置锁状态</string>
+    <string name="text_tag_operation_inactivate_tag">灭活标签</string>
+    <string name="text_tag_operation_easflag_configurate">EAS标志配置</string>
+    <string name="text_tag_operation_eas_monitor">EAS监控配置</string>
+    <string name="text_tag_operation_epc_filter">EPC过滤</string>
+    <string name="text_tag_operation_tag_filter">标签过滤</string>
+	<string name="label_tag_operation_match_data">匹配数据:</string>
+	<string name="label_tag_operation_match_area">匹配区域:</string>
+    <string name="text_tag_operation_match_area_epc">EPC区</string>
+    <string name="text_tag_operation_match_area_tid">TID区</string>
+    <string name="text_tag_operation_match_area_epc_gb">编码区</string>
+    <string name="text_tag_operation_match_area_tid_gb">信息区</string>
+    <string name="text_tag_operation_match_area_userdata_gb">用户子区</string>
+    
+    <!-- Start epc_write -->
+	<string name="label_tag_operation_write_epc_password">访问密码:</string>	    
+    <string name="hint_tag_operation_write_epc_password">请输入标签访问密码!</string>
+    <string name="label_tag_operation_write_epc_len">EPC长度:</string>
+    <string name="hint_tag_operation_write_epc_len">请输入EPC长度!</string>
+    <string name="label_tag_operation_write_epc_data">EPC数据:</string>
+    <string name="hint_tag_operation_write_epc_data">请输入EPC数据!</string>
+	<string name="menu_tag_operation_epc_write_label">写入</string>
+	<string name="toast_tag_operation_write_epc_password">标签访问密码不能为空,请输入标签访问密码!</string>
+	<string name="toast_tag_operation_write_epc_len">EPC长度不能为空,请输入EPC长度!</string>
+	<string name="toast_tag_operation_write_epc_data">EPC数据不能为空,请输入EPC数据!</string>
+	<string name="toast_tag_operation_write_epc_success">写EPC成功!</string>
+	<string name="toast_tag_operation_write_epc_failure">写EPC失败!</string>
+	<string name="progress_bar_write_epc_message">写EPC中&#8230;</string>
+	<string name="default_tag_operation_write_epc">112233445566778899AABBCC</string>
+	
+    <!-- End epc_write -->
+    
+    <!-- Start userdata_read -->
+    <string name="label_tag_operation_read_userdata_address">首地址:</string>
+    <string name="hint_tag_operation_read_userdata_address">请输入用户数据首地址!</string>
+    <string name="label_tag_operation_read_userdata_len">长度:</string>
+    <string name="hint_tag_operation_read_userdata_len">请输入用户数据长度!</string>
+    <string name="label_tag_operation_read_userdata_data">数据</string>
+    <string name="menu_tag_operation_userdata_read_label">读取</string>
+    <string name="menu_tag_operation_userdata_clear_label">清除</string>
+	<string name="toast_tag_operation_read_userdata_address">用户数据首地址不能为空,请输入用户数据首地址!</string>
+	<string name="toast_tag_operation_read_userdata_len">用户数据长度不能为空,请输入用户数据长度!</string>
+	<string name="toast_tag_operation_read_userdata_success">读取用户数据成功!</string>
+	<string name="toast_tag_operation_read_userdata_failure">读取用户数据失败!</string>
+	<string name="progress_bar_read_userdata_message">读取用户数据中&#8230;</string>
+	<string name="label_tag_operation_read_userdata_data_show">用户数据:</string>
+	
+    <!-- End userdata_read -->
+    
+    <!-- Start userdata_write -->
+    <string name="label_tag_operation_write_userdata_password">访问密码:</string>
+    <string name="hint_tag_operation_write_userdata_password">请输入标签访问密码!</string>
+    <string name="label_tag_operation_write_userdata_address">首地址:</string>
+    <string name="hint_tag_operation_write_userdata_address">请输入用户数据首地址!</string>
+    <string name="label_tag_operation_write_userdata_len">长度:</string>
+    <string name="hint_tag_operation_write_userdata_len">请输入用户数据长度!</string>
+	<string name="label_tag_operation_write_userdata_data">用户数据:</string>    
+    <string name="hint_tag_operation_write_userdata_data">请输入用户数据!</string>
+    <string name="menu_tag_operation_userdata_write_label">写入</string>
+	<string name="toast_tag_operation_write_userdata_password">标签访问密码不能为空,请输入标签访问密码!</string>
+	<string name="toast_tag_operation_write_userdata_address">用户数据首地址不能为空,请输入用户数据首地址!</string>
+	<string name="toast_tag_operation_write_userdata_len">用户数据长度不能为空,请输入用户数据长度!</string>
+	<string name="toast_tag_operation_write_userdata_data">用户数据不能为空,请输入用户数据!</string>
+	<string name="toast_tag_operation_write_userdata_success">写用户数据成功!</string>
+	<string name="toast_tag_operation_write_userdata_failure">写用户数据失败!</string>
+	<string name="progress_bar_write_userdata_message">写用户数据中&#8230;</string>
+	<string name="default_tag_operation_write_userdata">112233445566778899AABBCCDDEEFF00112233445566778899AABBCCDDEEFF00112233445566778899AABBCCDDEEFF00112233445566778899AABBCCDDEEFF00</string>
+	<!-- End userdata_write -->
+    
+    <!-- Start bank_write -->
+    <string name="label_tag_operation_bank_password">访问密码:</string>
+    <string name="hint_tag_operation_bank_password">请输入标签访问密码!</string>
+    <string name="label_tag_operation_bank_area">操作区域:</string>
+    <string name="label_tag_operation_bank_address">首地址:</string>
+    <string name="hint_tag_operation_bank_address">请输入标签数据区首地址!</string>
+    <string name="label_tag_operation_bank_len">长度:</string>
+    <string name="hint_tag_operation_bank_len">请输入标签数据区长度!</string>
+	<string name="label_radio_tag_operation_bank_area_epc">EPC</string>
+	<string name="label_radio_tag_operation_bank_area_tid">TID</string>
+	<string name="label_radio_tag_operation_bank_area_userdata">用户区</string>
+	<string name="toast_tag_operation_bank_password">标签访问密码不能为空,请输入标签访问密码!</string>
+	<string name="toast_tag_operation_bank_address">标签数据首地址不能为空,请输入标签数据首地址!</string>
+	<string name="toast_tag_operation_bank_len">标签数据长度不能为空,请输入标签数据长度!</string>
+	
+	<string name="label_tag_operation_write_bank_data">标签数据:</string>    
+    <string name="hint_tag_operation_write_bank_data">请输入标签数据!</string>
+    <string name="menu_tag_operation_write_bank_label">写入</string>
+	<string name="toast_tag_operation_write_bank_data">标签数据不能为空,请输入标签数据!</string>
+	<string name="toast_tag_operation_write_bank_success">写Bank数据成功!</string>
+	<string name="toast_tag_operation_write_bank_failure">写Bank数据失败!</string>
+	<string name="progress_bar_write_bank_message">写Bank数据中&#8230;</string>
+
+	<string name="menu_tag_operation_bank_clear_label">擦除</string>
+	<string name="toast_tag_operation_clear_bank_success">擦除Bank数据成功!</string>
+	<string name="toast_tag_operation_clear_bank_failure">擦除Bank数据失败!</string>
+	<string name="progress_bar_clear_bank_message">擦除Bank数据中&#8230;</string>
+		
+    <!-- End bank_write -->
+    
+    <!-- Start password_configurate -->
+    <string name="label_tag_operation_password_configurate_type">配置类型:</string>
+    <string name="label_radio_tag_operation_password_configurate_type_access">访问密码</string>
+    <string name="label_radio_tag_operation_password_configurate_type_destroy">销毁密码</string>
+    <string name="label_tag_operation_password_configurate_access_password">访问密码:</string>
+    <string name="hint_tag_operation_password_configurate_access_password">请输入标签访问密码!</string>
+    <string name="label_tag_operation_password_configurate_new_password">新密码:</string>
+    <string name="hint_tag_operation_password_configurate_new_password">请输入新密码!</string>
+    <string name="label_tag_operation_password_configurate_confirm_password">确认密码:</string>
+    <string name="hint_tag_operation_password_configurate_confirm_password">请输入确认密码!</string>
+	<string name="menu_tag_operation_password_configurate_config_label">配置</string>
+    <string name="toast_tag_operation_password_configurate_access_password">标签访问密码不能为空,请输入标签访问密码!</string>
+    <string name="toast_tag_operation_password_configurate_new_password">新密码不能为空,请输入新密码!</string>
+    <string name="toast_tag_operation_password_configurate_confirm_password">确认密码不能为空,请输入确认密码!</string>
+	<string name="toast_tag_operation_password_configurate_different_password">新密码与确认密码不一致,请重新输入!</string>    
+    <string name="progress_bar_password_configurate_message">配置密码中&#8230;</string>
+	<string name="toast_tag_operation_password_configurate_access_success">配置标签访问密码成功!</string>
+	<string name="toast_tag_operation_password_configurate_access_failure">配置标签访问密码失败!</string>
+	<string name="toast_tag_operation_password_configurate_destroy_success">配置标签销毁密码成功!</string>
+	<string name="toast_tag_operation_password_configurate_destroy_failure">配置标签销毁密码失败!</string>
+	
+    <!-- End password_configurate -->
+    
+    <!-- Start Lock_status -->
+    <string name="label_tag_operation_lock_status_access_password">访问密码:</string>
+    <string name="hint_tag_operation_lock_status_access_password">请输入标签访问密码!</string>
+    <string name="label_tag_operation_lock_status_type">操作类型:</string>
+    <string name="label_radio_tag_operation_lock_status_type_lock">锁定</string>
+    <string name="label_radio_tag_operation_lock_status_type_unlock">解锁</string>
+	<string name="label_tag_operation_lock_status_area">锁区域:</string>    
+    <string name="label_spinner_tag_operation_lock_status_area_all">所有区</string>
+    <string name="label_spinner_tag_operation_lock_status_area_tid">Tid区</string>
+    <string name="label_spinner_tag_operation_lock_status_area_epc">EPC区</string>
+    <string name="label_spinner_tag_operation_lock_status_area_userdata">用户数据区</string>
+    <string name="label_spinner_tag_operation_lock_status_area_access_password">访问密码区</string>
+    <string name="label_spinner_tag_operation_lock_status_area_destroy_password">销毁密码区</string>
+    <string name="menu_tag_operation_lock_status_config_label">配置</string>
+    <string name="toast_tag_operation_lock_status_configurate_success">配置标签锁状态成功!</string>
+    <string name="toast_tag_operation_lock_status_configurate_failure">配置标签锁状态失败!</string>
+	<string name="toast_tag_operation_lock_status_access_password">标签访问密码不能为空,请输入标签访问密码!</string>
+	<string name="progress_bar_lock_status_configurate_message">配置标签锁状态中&#8230;</string>	    
+    <!-- End Lock_status -->
+    
+    <!-- Start Inactivate_tag -->
+    <string name="label_tag_operation_inactivate_tag_password">灭活密码:</string>
+    <string name="hint_tag_operation_inactivate_tag_password">请输入标签灭活密码!</string>
+    <string name="label_tag_operation_inactivate_tag_epc">EPC:</string>
+    <string name="hint_tag_operation_inactivate_tag_epc">请输入EPC码!</string>
+    <string name="menu_tag_operation_inactivate_tag_config_label">灭活</string>
+	<string name="toast_tag_operation_inactivate_tag_success">灭活标签成功!</string>
+    <string name="toast_tag_operation_inactivate_tag_failure">灭活标签失败!</string>
+	<string name="toast_tag_operation_inactivate_tag_password">标签灭活密码不能为空,请输入标签灭活密码!</string>
+	<string name="toast_tag_operation_inactivate_tag_epc">EPC码不能为空,请输入EPC码!</string>
+	<string name="progress_bar_inactivate_tag_message">灭活标签中&#8230;</string>
+	
+    <!-- End Inactivate_tag -->
+    
+    <!-- Start Eas_flag -->
+    <string name="label_tag_operation_easflag_password">访问密码:</string>
+    <string name="hint_tag_operation_easflag_password">请输入标签访问密码!</string>
+    <string name="label_tag_operation_eas_flag_type">操作类型:</string>
+    <string name="label_radio_tag_operation_eas_flag_cancle">取消</string>
+    <string name="label_radio_tag_operation_eas_flat_setting">设置</string>
+    <string name="menu_tag_operation_eas_flat_config_label">配置</string>
+    <string name="toast_tag_operation_eas_flag_success">配置EAS标志成功!</string>
+    <string name="toast_tag_operation_eas_flag_failure">配置EAS标志失败!</string>
+    <string name="toast_tag_operation_eas_flag_password">标签访问密码不能为空,请输入标签访问密码!</string>
+    <string name="progress_bar_eas_flag_message">Eas标志配置中&#8230;</string>
+    <!-- End Eas_flag -->
+    
+    <!-- Start Eas_monitor -->
+    <string name="menu_tag_operation_eas_monitor_start_label">启动</string>
+    <string name="menu_tag_operation_eas_monitor_stop_label">停止</string>
+    <string name="progress_bar_eas_monitor_message">启动EAS监控中&#8230;</string>
+    <string name="toast_tag_operation_eas_monitor_start_success">Eas监控启动成功!</string>
+    <string name="toast_tag_operation_eas_monitor_start_failure">Eas监控启动失败!</string>
+    <string name="toast_tag_operation_eas_monitor_stop_success">Eas监控停止成功!</string>
+    <string name="toast_tag_operation_eas_monitor_stop_failure">Eas监控停止失败!</string>
+    <string name="toast_tag_operation_eas_monitor_found_flag">发现EAS位设置标签!</string>
+    <!-- End Eas_monitor -->
+    
+    <!-- Start epc_filter -->
+   	<string name="label_tag_operation_epc_filter_epc">EPC:</string>
+   	<string name="hint_tag_operation_epc_filter_epc">请输入匹配EPC数据(12字节)</string>
+   	<string name="label_tag_operation_epc_filter_epc_mask">匹配掩码:</string>
+   	<string name="hint_tag_operation_epc_filter_epc_mask">请输入匹配数据位掩码(12字节)!</string>
+    <string name="menu_tag_operation_epc_filter_configurate">配置</string>
+    <string name="menu_tag_operation_epc_filter_cancel">取消</string>
+   	<string name="toast_tag_operation_epc_filter_epc">EPC不能为空,请重新输入!</string>
+   	<string name="toast_tag_operation_epc_filter_epc_mask">匹配掩码不能为空,请重新输入!</string>
+   	<string name="toast_tag_operation_epc_filter_epc_out_of_length">EPC最大长度为12字节，请重新输入!</string>
+   	<string name="toast_tag_operation_epc_filter_epc_mask_out_of_length">匹配掩码最大长度为12字节，请重新输入!</string>
+    <string name="progress_bar_epc_filter_configurate_message">配置EPC过滤中&#8230;</string>
+    <string name="progress_bar_epc_filter_cancel_message">取消EPC过滤中&#8230;</string>
+    <string name="toast_tag_operation_epc_filter_configurate_success">配置EPC过滤成功!</string>
+    <string name="toast_tag_operation_epc_filter_configurate_failure">配置EPC过滤失败!</string>
+    <string name="toast_tag_operation_epc_filter_cancel_success">取消EPC过滤成功!</string>
+    <string name="toast_tag_operation_epc_filter_cancel_failure">取消EPC过滤失败!</string>
+   	<!-- End epc_filter -->
+    
+    <!-- End 6C -->
+    
+    <string name="title_tag_6b_operation">6B标签操作</string>
+    <string name="label_tag_6b_operation_tag_data">ID:</string>
+
+    <string name="text_tag_6b_operation_read_userdata">读6B数据</string>
+    <string name="text_tag_6b_operation_write_userdata">写6B数据</string>
+    <string name="text_tag_6b_operation_lock">锁6B标签</string>
+    <string name="text_tag_6b_operation_lock_status_query">锁状态查询</string>
+    <string name="text_tag_6b_operation_non_fixed__read_userdata">读6B变长数据</string>
+    <string name="text_tag_6b_operation_non_fixed_write_userdata">写6B变长数据</string>
+    <string name="text_tag_6b_operation_match_area_tid">ID区</string>
+    
+    <string name="label_tag_6b_operation_read_userdata_checked">读6B变长数据</string>
+    <string name="label_tag_6b_operation_write_userdata_checked">写6B变长数据</string>
+    <string name="label_tag_6b_operation_read_fixed_userdata_checked">读6B数据</string>
+    <string name="label_tag_6b_operation_write_fixed_userdata_checked">写6B数据</string>
+    
+	<string name="toast_tag_6b_operation_write_userdata_address_min_eight">首地址必须大于8，请重新输入!</string>
+    <string name="toast_tag_6b_operation_write_userdata_address_notice">首地址必须为4的倍数，请重新输入!</string>
+	<string name="default_tag_6b_operation_write_userdata_fixed">112233445566778899AABBCCDDEEFF00</string>
+    
+    <!-- GB Operation -->
+	<string name="title_tag_gb_operation">国标标签操作</string>
+    <string name="text_tag_gb_operation_read_userdata">读用户子区</string>
+	<string name="text_tag_gb_operation_write_userdata">写用户子区</string>
+	<string name="text_tag_gb_operation_mode_configuration">模式配置</string>
+	<string name="text_tag_gb_operation_inactivate">灭活标签</string>
+	
+    <string name="label_tag_gb_operation_read_userdata_address">首地址:</string>
+    <string name="hint_tag_gb_operation_read_userdata_address">请输入读取区域首地址!</string>
+    <string name="label_tag_gb_operation_read_userdata_len">读取长度:</string>
+    <string name="hint_tag_gb_operation_read_userdata_len">请输入读取长度!</string>
+    <string name="label_tag_gb_operation_read_userdata_data">数据</string>
+    <string name="menu_tag_gb_operation_userdata_read_label">读取</string>
+    <string name="menu_tag_gb_operation_userdata_clear_label">清除</string>
+	<string name="toast_tag_gb_operation_read_userdata_address">首地址不能为空，请重新输入!</string>
+	<string name="toast_tag_gb_operation_read_userdata_len">读取长度不能为空，请重新输入!</string>
+	<string name="toast_tag_gb_operation_read_userdata_success">读用户子区数据成功!</string>
+	<string name="toast_tag_gb_operation_read_userdata_failure">读用户子区数据失败!</string>
+	<string name="progress_bar_read_gb_userdata_message">读取数据中&#8230;</string>
+	<string name="label_tag_operation_read_gb_userdata_data_show">用户数据:</string>
+	<string name="label_tag_gb_operation_read_userdata_password">访问密码:</string>
+	<string name="hint_tag_gb_operation_read_userdata_password">请输入标签访问密码!</string>
+    <string name="toast_tag_gb_operation_read_userdata_password">访问密码不能为空，请重新输入!</string>
+	<string name="label_tag_gb_operation_read_userdata_number">用户子区编号</string>
+	<string name="hint_tag_gb_operation_read_userdata_number">(0~15)</string>
+	<string name="toast_tag_gb_operation_read_userdata_number_null">用户子区编号不能为空，请重新输入!</string>
+	<string name="toast_tag_gb_operation_read_userdata_number_scope">用户子区编号范围为0&#8211;15，请重新输入!</string>
+	
+	<!-- Write -->
+	<string name="label_tag_gb_operation_write_userdata_address">首地址:</string>
+    <string name="hint_tag_gb_operation_write_userdata_address">请输入写入区域首地址!</string>
+    <string name="label_tag_gb_operation_write_userdata_data">Data</string>
+    <string name="menu_tag_gb_operation_userdata_write_label">写入</string>
+	<string name="toast_tag_gb_operation_write_userdata_address">首地址不能为空，请重新输入!</string>
+	<string name="toast_tag_gb_operation_write_userdata_success">写或擦除用户子区数据成功!</string>
+	<string name="toast_tag_gb_operation_write_userdata_failure">写或擦除用户子区数据失败!</string>
+	<string name="toast_tag_gb_operation_write_userdata_data">写入数据不能为空，请重新输入!</string>
+	<string name="toast_tag_gb_operation_write_userdata_data_double_byte">写入数据必须为双字节，请重新输入!</string>
+	<string name="progress_bar_write_gb_userdata_message">写入(擦除)数据中&#8230;</string>
+	<string name="label_tag_operation_write_gb_userdata_data_show">用户数据(双字节)</string>
+	<string name="label_tag_gb_operation_write_userdata_password">访问密码:</string>
+	<string name="hint_tag_gb_operation_write_userdata_password">请输入标签访问密码!</string>
+    <string name="toast_tag_gb_operation_write_userdata_password">访问密码不能为空，请重新输入!</string>
+	<string name="label_tag_gb_operation_write_userdata_number">用户子区编号</string>
+	<string name="hint_tag_gb_operation_write_userdata_number">(0~15)</string>
+	<string name="toast_tag_gb_operation_write_userdata_number_null">用户子区编号不能为空，请重新输入!</string>
+	<string name="toast_tag_gb_operation_write_userdata_number_scope">用户子区编号范围为0&#8211;15，请重新输入!</string>
+	<string name="default_tag_gb_operation_write_userdata">112233445566778899AABBCCDDEEFF00</string>	
+	
+    <string name="menu_tag_gb_operation_userdata_erase_label">擦除</string>
+	<string name="label_tag_gb_operation_write_userdata_len">长度</string>
+	<string name="hint_tag_gb_operation_write_userdata_len">仅擦除标签时用!</string>
+	<string name="toast_tag_gb_operation_write_userdata_len_even_number">长度必须为偶数!</string>
+	<string name="toast_tag_gb_operation_write_userdata_len_null">长度不能为空，请重新输入!</string>
+	
+	<string name="menu_tag_gb_operation_userdata_dynamic_write_label">动态写</string>
+	<string name="menu_tag_gb_operation_userdata_dynamic_write_stop_label">停止</string>
+	<string name="toast_tag_gb_operation_write_userdata_select_failure">选择标签指令错误!</string>
+	<string name="toast_tag_gb_operation_write_userdata_start_dynamic">发送动态写指令成功!</string>
+	<string name="label_tag_gb_operation_dynamic_write_number">动态写次数</string>
+	
+	<!-- Mode Configuration -->
+	
+	<string name="label_gb_operation_mode_configuration_password">锁密码:</string>
+	<string name="hint_gb_operation_mode_configuration_password">请输入锁密码!</string>
+	<string name="label_gb_operation_mode_configuration_area">存储区域:</string>
+	<string name="label_radio_gb_operation_mode_configuration_lock">锁模式</string>
+	<string name="label_radio_gb_operation_mode_configuration_safety">安全模式</string>
+	<string name="label_gb_operation_mode_configuration_action">动作:</string>
+	
+	<string name="toast_tag_gb_operation_mode_configuration_success">配置模式成功!</string>
+	<string name="toast_tag_gb_operation_mode_configuration_failure">配置模式失败!</string>
+	<string name="label_gb_operation_mode_configuration_userdata_num">用户子区编号:</string>
+	<string name="hint_gb_operation_mode_configuration_userdata_num">请输入编号(0~15)!</string>
+	<string name="menu_tag_gb_operation_mode_configuration_config_label">配置</string>
+	<string name="toast_tag_gb_operation_mode_configuration_password">锁密码不能为空，请重新输入!</string>
+	<string name="toast_tag_gb_operation_mode_configuration_num_null">用户子区编号不能为空，请重新输入!</string>
+	<string name="toast_tag_gb_operation_mode_configuration_num_scope">用户子区编号范围为0&#8211;15，请重新输入!</string>
+	<string name="progress_bar_gb_mode_configuration_message">配置中&#8230;</string>	
+	
+	<!-- Inactivate Tag -->
+	<string name="label_tag_gb_operation_inactivate_password">灭活密码:</string>
+	<string name="hint_tag_gb_operation_inactivate_password">请输入灭活密码!</string>
+	<string name="toast_tag_gb_operation_inactivate_success">灭活标签成功!</string>
+	<string name="toast_tag_gb_operation_inactivate_failure">灭活标签失败!</string>
+	<string name="menu_tag_gb_operation_inactivate_tag_label">灭活</string>
+	<string name="progress_bar_inactivate_gb_tag_message">灭活中&#8230;</string>
+	<!-- End GB Operation -->
+    
+</resources>

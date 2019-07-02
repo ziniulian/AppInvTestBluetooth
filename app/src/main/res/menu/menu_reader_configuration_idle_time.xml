@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item android:id="@+id/menu_reader_configuration_idle_time_config_id"
+        android:showAsAction="always"
+        android:title="@string/menu_reader_configuration_idle_time_config_label"/>
+    
+    <item android:id="@+id/menu_reader_configuration_idle_time_query_id"
+        android:showAsAction="ifRoom"
+        android:title="@string/menu_reader_configuration_idle_time_query_label"/>
+
+</menu>

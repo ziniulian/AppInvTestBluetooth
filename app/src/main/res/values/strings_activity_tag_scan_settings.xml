@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <string name="title_tag_scan_settings">Scan Settings</string>
+    <string name="menu_tag_scan_settings_save">Save</string>
+
+    <string name="label_antenna_number">Antenna No:</string>
+    <string name="label_antenna_one">One</string>
+    <string name="label_notice_voice">Voice</string>
+    <string name="label_rssi">RSSI</string>
+    <string name="label_utc">UTC</string>
+    <string name="label_antenna_two">Two</string>
+    <string name="label_antenna_three">Three</string>
+    <string name="label_antenna_four">Four</string>
+    <string name="label_q_value">Static-Q No:</string>
+    <string name="hint_q_value">0~15</string>
+    <string name="label_operation_type">OP_Type:</string>
+    <string name="label_tag_type">Tag_Type:</string>
+    <string name="lable_tag_scan_setting_single">Single</string>
+    <string name="lable_tag_scan_setting_loop">Loop</string>
+    <string name="lable_tag_scan_6c">6C</string>
+    <string name="lable_tag_scan_6b">6B</string>
+    <string name="lable_tag_scan_6c_6b">6C&amp;6B</string>
+    <string name="lable_tag_scan_gb">GB</string>
+    <string name="label_tid_len">TID Len:</string>
+    <string name="label_userdata_address">UserData Address:</string>
+    <string name="label_userdata_len">UserData Len:</string>
+    <string name="label_read_epc">Read EPC</string>
+    <string name="label_read_tid">Read TID</string>
+    <string name="label_read_userdata">Read ALL</string>
+    
+    <string name="label_read_id_6b">ID</string>
+    <string name="label_read_userdata_6b">UserData</string>
+    <string name="label_id_len_6b">ID Len:</string>
+    <string name="label_userdata_address_6b">UserData Address:</string>
+    <string name="label_userdata_len_6b">UserData Len:</string>
+    
+    <string name="label_id_len_6c_6b">ID Len:</string>
+    <string name="label_userdata_address_6c_6b">UserData Address:</string>
+    <string name="label_userdata_len_6c_6b">UserData Len:</string>
+    
+    <string name="toast_tag_scan_settings_antenna_select_one">Please select an antenna at least!</string>
+    <string name="toast_tag_scan_settings_read_type_select_one">Please select an read-type at least!</string>
+    <string name="toast_tag_scan_settings_save_success">Settings save success!</string>
+    
+    <string name="toast_tag_scan_settings_rssi_failure">Reader RSSI Configuration Failure!</string>
+    <string name="toast_tag_scan_settings_rssi_failure_reader_disconnect">Reader RSSI Configuration Failure - Reader Disconnect</string>
+    
+    <string name="toast_tag_scan_settings_utc_failure">Reader UTC Configuration Failure!</string>
+    <string name="toast_tag_scan_settings_utc_failure_reader_disconnect">Reader UTC Configuration Failure - Reader Disconnect</string>
+
+    
+    <!-- GB configuration -->
+    <string name="label_gb_inventory">Inventory</string>
+    <string name="label_gb_access_read">AccessRead</string>
+    <string name="label_gb_combination_read">CombinationRead</string>
+    <string name="label_gb_read_all">ReadAll</string>
+    
+    <string name="label_gb_inventory_parameter_target">Target</string>
+    <string name="label_gb_inventory_parameter_session">Session</string>
+    <string name="label_gb_inventory_parameter_condition">Condition</string>
+    
+    <string name="label_gb_access_read_parameter_password">Password</string>
+    <string name="hint_gb_access_read_parameter_password">Please input tag access password!</string>
+    <string name="label_gb_access_read_parameter_bank">Bank</string>
+    <string name="label_gb_access_read_parameter_userdata_num">Number</string>
+    <string name="hint_gb_access_read_parameter_userdata_num">Please input userdata number(0~15)!</string>
+    <string name="label_gb_access_read_parameter_address">Address</string>
+    <string name="hint_gb_access_read_parameter_address">Please input tag access address!</string>
+    <string name="label_gb_access_read_parameter_len">Length</string>
+    <string name="hint_gb_access_read_parameter_len">Please input tag access length!</string>
+    <string name="label_gb_combination_read_parameter_type">Type</string>
+    <string name="label_gb_combination_read_parameter_password">Password</string>
+    <string name="hint_gb_combination_read_parameter_password">Please input tag access password!</string>
+    <string name="label_gb_combination_read_parameter_len">Length</string>
+    <string name="hint_gb_combination_read_parameter_len">Please input tag access length!</string>
+    <string name="label_gb_read_all_parameter_tid_password">Tid Password</string>
+    <string name="hint_gb_read_all_parameter_tid_password">Please input tag tid access password!</string>
+    <string name="label_gb_read_all_parameter_tid_len">Tid Length</string>
+    <string name="hint_gb_read_all_parameter_tid_len">Please input tag tid access length!</string>
+    <string name="label_gb_read_all_parameter_epc_len">GB-EPC Length</string>
+    <string name="hint_gb_read_all_parameter_epc_len">Please input tag GB-EPC access Length!</string>
+    <string name="label_gb_read_all_parameter_userdata_bank">Bank</string>
+    <string name="label_gb_read_all_parameter_userdata_password">Userdata Password</string>
+    <string name="hint_gb_read_all_parameter_userdata_password">Please input tag userdata access password!</string>
+    <string name="label_gb_read_all_parameter_userdata_address">Userdata Address</string>
+    <string name="hint_gb_read_all_parameter_userdata_address">Please input tag userdata access address!</string>
+    <string name="label_gb_read_all_parameter_userdata_len">Userdata Length</string>
+    <string name="hint_gb_read_all_parameter_userdata_len">Please input tag userdata access length!</string>
+    
+    <string name="label_radio_gb_access_read_parameter_epc">GB_EPC</string>
+    <string name="label_radio_gb_access_read_parameter_tid">GB_TID</string>
+    <string name="label_radio_gb_access_read_parameter_userdata">Userdata</string>
+</resources>

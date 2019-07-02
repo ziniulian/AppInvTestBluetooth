@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <!-- Found tag -->
+    <string name="title_found_tag">查找标签</string>
+    <string name="label_found_tag_type">类型</string>
+    <string name="lable_found_tag__type_tid">TID</string>
+    <string name="lable_found_tag__type_epc">EPC</string>
+    <string name="label_found_tag_address">首地址</string>
+    <string name="hint_found_tag_address">请输入首地址!</string>
+    <string name="label_found_tag_data">匹配数据</string>
+    <string name="hint_found_tag_data">请输入匹配数据!</string>
+    <string name="label_found_tag_result">标签</string>
+    <string name="menu_found_tag_find_title">开始</string>
+    <string name="menu_found_tag_stop_title">停止</string>
+    <string name="toast_found_tag_address_null">首地址不能为空，请重新输入!</string>
+    <string name="toast_found_tag_data_null">匹配数据不能为空，请重新输入!</string>
+    <string name="progress_bar_found_tag_message">查找中&#8230;</string>
+    <string name="toast_found_tag_success">查找成功!</string>
+    <string name="toast_found_tag_failure">查找失败!</string>
+    <string name="menu_found_tag_clear_title">清除</string>
+    
+    <!-- Tag Session -->
+    <string name="title_tag_session_config">会话配置</string>
+    <string name="label_tag_session_config_session">会话</string>
+    <string name="label_tag_session_config_flag">标志</string>
+    <string name="menu_tag_session_flag_config_label">配置</string>
+    <string name="menu_tag_session_flag_query_label">查询</string>
+    <string name="progress_bar_tag_session_flag_config_message">会话配置中&#8230;</string>
+    <string name="progress_bar_tag_session_flag_query_message">会话查询中&#8230;</string>
+    <string name="toast_tag_session_flag_config_query_success">会话配置或查询成功!</string>
+    <string name="toast_tag_session_flag_config_query_failure">会话配置或查询失败!</string>
+    
+    <!-- Static Q -->
+    <string name="title_static_q_config">Q值配置</string>
+    <string name="menu_static_q_config_label">配置</string>
+    <string name="menu_static_q_query_label">查询</string>
+    <string name="progress_bar_static_q_config_message">Q值配置中&#8230;</string>
+    <string name="progress_bar_static_q_query_message">Q值查询中&#8230;</string>
+    <string name="toast_static_q_config_query_success">Q值配置或查询成功!</string>
+    <string name="toast_static_q_config_query_failure">Q值配置或查询失败!</string>
+    <string name="toast_static_q_not_null">Q值不能为空!</string>
+    
+</resources>

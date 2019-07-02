@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    
+    <item android:id="@+id/menu_reader_flash_cache_data_export"
+        android:showAsAction="ifRoom"
+        android:title="@string/menu_reader_flash_cache_data_export_title"/>
+    <item android:id="@+id/menu_reader_flash_cache_data_clear"
+        android:showAsAction="ifRoom"
+        android:title="@string/menu_reader_flash_cache_data_clear_title"/>
+</menu>

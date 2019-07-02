@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.invengo.rfidpad"
+    android:versionCode="1"
+    android:versionName="1.5" >
+    
+    <uses-sdk
+        android:minSdkVersion="19"
+        android:targetSdkVersion="19" />
+
+	<uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+
+    <uses-feature android:name="android.hardware.bluetooth_le" android:required="false"/>
+    
+    <application
+        android:name="com.invengo.rfidpad.base.RfidApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/invengo_logo"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name="com.invengo.rfidpad.MainActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" >
+            <intent-filter >
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.invengo.rfidpad.LoginActivity" 
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"
+            android:launchMode="singleTask">
+        </activity>
+        <activity android:name="com.invengo.rfidpad.base.ReaderMainActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask" >
+        </activity>
+        <activity android:name="com.invengo.rfidpad.scan.TagScanActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask" >
+        </activity>
+        <activity android:name="com.invengo.rfidpad.scan.TagScanSettingsActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" >
+        </activity>
+        <activity android:name="com.invengo.rfidpad.scan.Tag6COperationActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask">
+        </activity>
+        <activity android:name="com.invengo.rfidpad.scan.tag6c.TagEPCWriteActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask">
+        </activity>
+        <activity android:name="com.invengo.rfidpad.scan.tag6c.TagUserDataReadActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask">
+        </activity>
+        <activity android:name="com.invengo.rfidpad.scan.tag6c.TagUserDataWriteActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask">
+        </activity>
+        <activity android:name="com.invengo.rfidpad.scan.tag6c.TagBankWriteActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask">
+        </activity>
+        <activity android:name="com.invengo.rfidpad.scan.tag6c.TagBankClearActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask">
+        </activity>
+        <activity android:name="com.invengo.rfidpad.scan.tag6c.TagPasswordConfigurateActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask">
+        </activity>
+        <!-- <activity android:name="com.invengo.rfidpad.scan.tag6c.TagDestroyPasswordConfigurateActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask">
+        </activity> -->
+        <activity android:name="com.invengo.rfidpad.scan.tag6c.TagLockStatusConfigurateActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask">
+        </activity>
+        <activity android:name="com.invengo.rfidpad.scan.tag6c.TagInactivateActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask">
+        </activity>
+        <activity android:name="com.invengo.rfidpad.scan.tag6c.TagEasFlagConfigurateActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask">
+        </activity>
+        <activity android:name="com.invengo.rfidpad.scan.tag6c.TagEasMonitorActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask">
+        </activity>
+        <activity android:name="com.invengo.rfidpad.scan.tag6c.TagEpcFilterActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask">
+        </activity>
+        <activity android:name="com.invengo.rfidpad.scan.tag6c.TagFilteByTimeActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask">
+        </activity>
+        <activity android:name="com.invengo.rfidpad.scan.Tag6BOperationActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask">
+        </activity>
+        <activity android:name="com.invengo.rfidpad.scan.tag6b.TagUserdataReadActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask">
+        </activity>
+        <activity android:name="com.invengo.rfidpad.scan.tag6b.TagUserdataWriteActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask">
+        </activity>
+        <activity android:name="com.invengo.rfidpad.scan.tag6b.TagUserdataLockActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask">
+        </activity>
+        <activity android:name="com.invengo.rfidpad.scan.tag6b.TagNonFixedUserdataReadActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask">
+        </activity>
+        <activity android:name="com.invengo.rfidpad.scan.tag6b.TagNonFixedUserdataWriteActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask">
+        </activity>
+        <activity android:name="com.invengo.rfidpad.scan.tag6b.TagLockStatusQueryActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask">
+        </activity>
+        <activity android:name="com.invengo.rfidpad.config.ReaderPowerConfigurationActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask">
+        </activity>
+        <activity android:name="com.invengo.rfidpad.config.AboutActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask">
+        </activity>
+        <activity android:name="com.invengo.rfidpad.config.TagFilterConfigActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask">
+        </activity>
+        <activity android:name="com.invengo.rfidpad.config.MoreActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask">
+        </activity>
+        <activity android:name="com.invengo.rfidpad.other.FoundTagActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask">
+        </activity>
+        <activity android:name="com.invengo.rfidpad.debug.ReaderDebugActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask">
+        </activity>
+        <activity android:name="com.invengo.rfidpad.debug.RepeatRWDebugActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask"
+            android:windowSoftInputMode="adjustResize|stateVisible" >
+        </activity>
+        <activity android:name="com.invengo.rfidpad.debug.ReaderStaticDebugActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask"
+            android:windowSoftInputMode="adjustResize|stateVisible">
+        </activity>
+        <activity android:name="com.invengo.rfidpad.debug.ReaderCommonDebugActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask">
+        </activity>
+        <activity android:name="com.invengo.rfidpad.debug.Reader6CTrafficRateDebugActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask">
+        </activity>
+        <activity android:name="com.invengo.rfidpad.other.TagSessionConfigActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask">
+        </activity>
+        <activity android:name="com.invengo.rfidpad.config.ReaderFrequencyBandConfigActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask">
+        </activity>
+        <activity android:name="com.invengo.rfidpad.base.PowerManagerActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask">
+        </activity>
+        <activity android:name="com.invengo.rfidpad.other.StaticQConfigActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask">
+        </activity>
+        <service
+            android:name="com.ble.ble.BleService"
+            android:enabled="true"
+            android:exported="false" />
+        
+        <activity android:name="com.invengo.rfidpad.config.ReaderIdleTimeConfigurationActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask">
+        </activity>
+        <activity android:name="com.invengo.rfidpad.config.ReaderFlashTimeIntervalConfigActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask">
+        </activity>
+        <activity android:name="com.invengo.rfidpad.config.ReaderTimeSynchronizationActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask">
+        </activity>
+        <activity android:name="com.invengo.rfidpad.config.ReaderThresholdVoltageActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask">
+        </activity>
+        <activity android:name="com.invengo.rfidpad.config.ReaderBuzzerConfigurationActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask">
+        </activity>
+        <activity android:name="com.invengo.rfidpad.config.ReaderFlashCacheDataActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask">
+        </activity>
+        <activity android:name="com.invengo.rfidpad.config.ReaderUsbControlActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask">
+        </activity>
+        <activity android:name="com.invengo.rfidpad.debug.ReaderRestartDebugActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask">
+        </activity>
+        <activity android:name="com.invengo.rfidpad.config.ReaderBluetoothPasswordActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask">
+        </activity>
+        <activity android:name="com.invengo.rfidpad.config.ReaderUtcControlActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask">
+        </activity>
+        <activity android:name="com.invengo.rfidpad.debug.ReaderUpgradeDebugActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"
+            android:launchMode="singleTask">
+        </activity>
+        <activity android:name="com.invengo.rfidpad.debug.ReaderPowerVoltageDebugActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask">
+        </activity>
+        <activity android:name="com.invengo.rfidpad.debug.ReaderIntervalScanDebugActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask">
+        </activity>
+        <activity android:name="com.invengo.rfidpad.scan.taggb.GBTagReadActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask">
+        </activity>
+        <activity android:name="com.invengo.rfidpad.scan.TagGBOperationActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask">
+        </activity>
+        <activity android:name="com.invengo.rfidpad.scan.taggb.GBTagWriteActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask"
+            android:windowSoftInputMode="adjustResize|stateVisible">
+        </activity>
+        <activity android:name="com.invengo.rfidpad.scan.taggb.GBTagModeConfigurationActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask">
+        </activity>
+        <activity android:name="com.invengo.rfidpad.scan.taggb.GBTagInactivateActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask">
+        </activity>
+        
+        <activity android:name="com.invengo.rfidpad.debug.ReaderBasebandUpgradeDebugActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask">
+        </activity>
+        
+        <activity android:name="com.invengo.rfidpad.debug.Reader6BTrafficRateDebugActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask">
+        </activity>
+        
+	</application>
+
+</manifest>

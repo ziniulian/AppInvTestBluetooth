@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <!-- Power Configuration -->
+    <string name="title_reader_configuration_power">功率</string>
+    <string name="label_reader_configuration_antenna_one">天线</string>
+    <string name="label_reader_configuration_power_unit">dBm</string>
+    
+    <string name="toast_reader_configuration_antenna_enabled_success">端口使能设置成功!</string>
+    <string name="toast_reader_configuration_antenna_enabled_failure">端口使能设置失败!</string>
+    <string name="toast_reader_configuration_antenna_rate_success">端口功率等级设置或查询成功!</string>
+    <string name="toast_reader_configuration_antenna_rate_failure">端口功率等级设置或查询失败!</string>
+    
+    <string name="menu_reader_configuration_power_config_label">配置</string>
+    <string name="menu_reader_configuration_power_query_label">查询</string>
+    
+    <string name="progress_bar_configuration_power_message">配置功率中&#8230;</string>
+    <string name="progress_bar_query_power_message">查询功率中&#8230;</string>
+    
+    <!-- Tag Filter Interval Time -->
+    
+    <string name="toast_tag_filter_configuration_interval_time_not_null">间隔时间不允许为空，请重新输入!</string>
+    <string name="toast_tag_filter_configuration_interval_time_out_of_bounds">间隔时间超出范围，请重新输入!</string>
+    <string name="label_tag_filter_configuration_interval_time">间隔时间</string>
+    <string name="label_tag_filter_configuration_interval_time_unit">* 100ms</string>
+    <string name="label_tag_filter_configuration_interval_time_description">配置或取消重复标签按时间过滤功能。值范围为 0&#8211;65535。当取消操作时，间隔时间默认为null！</string>
+	<string name="title_tag_filter_configuration">标签过滤配置</string>
+    <string name="menu_tag_filter_configuration_config_label">配置</string>
+    <string name="menu_tag_filter_configuration_cancel_label">取消</string>
+    <string name="progress_bar_tag_filter_configuration_config_message">配置中&#8230;</string>
+    <string name="progress_bar_tag_filter_configuration_cancel_message">取消中&#8230;</string>
+    <string name="toast_tag_filter_configuration_success">操作成功!</string>
+    <string name="toast_tag_filter_configuration_failure">操作失败!</string>
+    
+    <!-- More -->
+    <string name="title_more_operation">更多配置</string>
+    
+    <!-- Frequency Band -->
+    <string name="title_reader_frequency_band_config">频段频点配置</string>
+    <string name="label_reader_frequency_band">频段</string>
+    <string name="menu_tag_frequency_band_config_label">频点配置</string>
+    <string name="menu_tag_frequency_band_query_label">查询</string>
+    <string name="toast_reader_frequency_band_config_success">配置频段成功!</string>
+    <string name="toast_reader_frequency_band_config_failure">配置频段失败!</string>
+    <string name="toast_reader_frequency_config_success">配置频点成功!</string>
+    <string name="toast_reader_frequency_config_failure">配置频点失败!</string>
+    <string name="progress_bar_reader_frequency_band_query_message">查询中&#8230;</string>
+    <string name="progress_bar_reader_frequency_config_message">配置中&#8230;</string>
+    <string name="toast_reader_frequency_band_query_success">查询频段成功!</string>
+    <string name="toast_reader_frequency_band_query_failure">查询频段失败!</string>
+    
+    <!-- Idle Time -->
+    <string name="title_reader_configuration_idle_time">待机时间</string>
+    <string name="label_reader_configuration_idle_time">待机时间</string>
+    <string name="hint_reader_configuration_idle_time">30~600</string>
+    <string name="label_reader_configuration_idle_time_unit">s(30~600)</string> 
+    
+    <string name="toast_reader_configuration_idle_time_success">待机时间配置或查询成功!</string>
+    <string name="toast_reader_configuration_idle_time_failure">待机时间配置或查询失败!</string>
+    <string name="menu_reader_configuration_idle_time_config_label">配置</string>
+    <string name="menu_reader_configuration_idle_time_query_label">查询</string>
+    <string name="progress_bar_configuration_idle_time_message">配置中&#8230;</string>
+    <string name="progress_bar_query_idle_time_message">查询中&#8230;</string>
+    <string name="toast_reader_configuration_idle_time_not_null">待机时间不能为空,请重新输入!</string>
+    
+    <!-- Flash Time Interval -->
+    <string name="title_reader_configuration_time_interval">Flash时间间隔</string>
+    <string name="label_reader_configuration_time_interval">Flash时间间隔</string>
+    <string name="label_reader_configuration_time_interval_unit">ms</string> 
+    
+    <string name="toast_reader_configuration_time_interval_success">Flash时间间隔配置或查询成功!</string>
+    <string name="toast_reader_configuration_time_interval_failure">Flash时间间隔配置或查询失败!</string>
+    <string name="menu_reader_configuration_time_interval_config_label">配置</string>
+    <string name="menu_reader_configuration_time_interval_query_label">查询</string>
+    <string name="progress_bar_configuration_time_interval_message">配置中&#8230;</string>
+    <string name="progress_bar_query_time_interval_message">查询中&#8230;</string>
+    <string name="toast_reader_configuration_time_interval_not_null">Flash时间间隔不能为空,请重新输入!</string>
+    
+    <!-- Time Synchronization -->
+    <string name="title_reader_configuration_time_synchronization">时钟同步</string>
+    <string name="label_reader_configuration_time_synchronization_date">读写器日期:</string>
+    <string name="label_reader_configuration_time_synchronization_time">读写器时间:</string>
+    
+    <string name="toast_reader_configuration_time_synchronization_success">读写器时间同步或查询成功!</string>
+    <string name="toast_reader_configuration_time_synchronization_failure">读写器时间同步或查询失败!</string>
+    <string name="menu_reader_configuration_time_synchronization_config_label">同步</string>
+    <string name="menu_reader_configuration_time_synchronization_query_label">查询</string>
+    <string name="toast_reader_configuration_time_synchronization_date_not_null">日期不能为空，请重新输入!</string>
+    <string name="toast_reader_configuration_time_synchronization_time_not_null">时间不能为空，请重新输入!</string>
+    <string name="progress_bar_configuration_time_synchronization_message">同步中&#8230;</string>
+    <string name="progress_bar_query_time_synchronization_message">查询中&#8230;</string>
+    <string name="hint_reader_configuration_time_synchronization_date_time">请单击选择日期时间!</string>
+    
+    <!-- Threshold Voltage -->
+    <string name="title_reader_configuration_threshold_voltage">电压阀值</string>
+    <string name="label_reader_configuration_threshold_voltage">电压:</string>
+    <string name="label_reader_configuration_threshold_voltage_unit">mv</string>
+    
+    <string name="toast_reader_configuration_threshold_voltage_success">读写器电压阀值配置或查询成功!</string>
+    <string name="toast_reader_configuration_threshold_voltage_failure">读写器电压阀值配置或查询失败!</string>
+    <string name="menu_reader_configuration_threshold_voltage_config_label">配置</string>
+    <string name="menu_reader_configuration_threshold_voltage_query_label">查询</string>
+    <string name="toast_reader_configuration_threshold_voltage_date_not_null">电压阀值不能为空，请重新输入!!</string>
+    <string name="progress_bar_configuration_threshold_voltage_message">配置中&#8230;</string>
+    <string name="progress_bar_query_threshold_voltage_message">查询中&#8230;</string>
+    
+    <!-- Buzzer Configuration-->
+    <string name="title_reader_configuration_buzzer_configuration">蜂鸣器配置</string>
+    
+    <string name="label_reader_configuration_buzzer_configuration">蜂鸣器</string>
+    <string name="toast_reader_configuration_buzzer_configuration_success">蜂鸣器开启或关闭成功!</string>
+    <string name="toast_reader_configuration_buzzer_configuration_failure">蜂鸣器开启或关闭失败!</string>
+    <string name="menu_reader_configuration_buzzer_configuration_open_label">开启</string>
+    <string name="menu_reader_configuration_buzzer_configuration_close_label">关闭</string>
+    <string name="menu_reader_configuration_buzzer_configuration_test_label">测试</string>
+    <string name="progress_bar_configuration_buzzer_configuration_open_message">开启中&#8230;</string>
+    <string name="progress_bar_configuration_buzzer_configuration_close_message">关闭中&#8230;</string>
+    <string name="menu_buzzer_test_find_title">测试</string>
+    <string name="menu_buzzer_test_stop_title">停止</string>
+    
+    <!-- Flash Cache Data -->
+    <string name="title_reader_flash_cache_data">Flash缓存数据</string>
+    
+    <string name="label_reader_flash_cache_data_number">标签数量</string>
+    <string name="menu_reader_flash_cache_data_export_title">导出</string>
+    <string name="menu_reader_flash_cache_data_stop_title">停止</string>
+    <string name="menu_reader_flash_cache_data_clear_title">清空</string>
+    <string name="toast_reader_flash_cache_data_export_start">开始导出</string>
+    <string name="toast_reader_flash_cache_data_export_stop">停止导出</string>
+    <string name="toast_reader_flash_cache_data_export_clear">清空完成</string>
+    <string name="toast_reader_flash_cache_data_export_empty">无缓存数据</string>
+    <string name="toast_reader_flash_cache_data_clear_refuse">清空被拒绝</string>
+    <string name="progress_bar_clear_default_message">清空中&#8230;</string>
+    <string name="toast_reader_flash_cache_data_export_complete">导出缓存数据完成</string>
+    
+    <!-- USB Control -->
+    <string name="title_reader_configuration_usb_control">USB供电控制</string>
+    <string name="menu_reader_configuration_usb_control_open_label">开启</string>
+    <string name="menu_reader_configuration_usb_control_close_label">关闭</string>
+    <string name="toast_reader_configuration_usb_control_success">USB供电控制开启或关闭成功!</string>
+    <string name="toast_reader_configuration_usb_control_failure">USB供电控制开启或关闭失败!</string>
+    <string name="progress_bar_configuration_usb_control_open_message">开启中&#8230;</string>
+    <string name="progress_bar_configuration_usb_control_close_message">关闭中&#8230;</string>
+    
+    <!-- Restart Factory reset-->
+    <string name="title_reader_configuration_restart_default">重启/恢复出厂设置</string>
+    <string name="menu_reader_configuration_restart_label">重启</string>
+    <string name="menu_reader_configuration_default_label">重置</string>
+    <string name="toast_reader_configuration_restart_default_success">恢复出厂设置成功!</string>
+    <string name="toast_reader_configuration_restart_default_failure">恢复出厂设置失败!</string>
+    <string name="progress_bar_configuration_restart_message">已开始重启读写器!</string>
+    <string name="progress_bar_configuration_default_message">恢复出厂设置中&#8230;</string>
+    
+    <!-- Bluetooth Password -->
+    <string name="title_reader_configuration_bluetooth_password">蓝牙配对密码</string>
+    <string name="label_reader_configuration_bluetooth_password">密码:</string>
+    
+    <string name="toast_reader_configuration_bluetooth_password_success">蓝牙配对密码配置或查询成功!</string>
+    <string name="toast_reader_configuration_bluetooth_password_failure">蓝牙配对密码配置或查询失败!</string>
+    <string name="menu_reader_configuration_bluetooth_password_config_label">配置</string>
+    <string name="menu_reader_configuration_bluetooth_password_query_label">查询</string>
+    <string name="toast_reader_configuration_bluetooth_password_not_null">密码不能为空,请重新输入!</string>
+    <string name="toast_reader_configuration_bluetooth_password_four">密码长度必须为4,请重新输入!</string>
+    <string name="progress_bar_configuration_bluetooth_password_message">配置中&#8230;</string>
+    <string name="progress_bar_query_bluetooth_password_message">查询中&#8230;</string>
+    
+    <!-- UTC Control -->
+    <string name="title_reader_configuration_utc_control">UTC开关</string>
+    <string name="menu_reader_configuration_utc_control_open_label">开启</string>
+    <string name="menu_reader_configuration_utc_control_close_label">关闭</string>
+    <string name="toast_reader_configuration_utc_control_success">UTC开关开启或关闭成功!</string>
+    <string name="toast_reader_configuration_utc_control_failure">UTC开关开启或关闭失败!</string>
+    <string name="progress_bar_configuration_utc_control_open_message">开启中&#8230;</string>
+    <string name="progress_bar_configuration_utc_control_close_message">关闭中&#8230;</string>
+    
+</resources>
