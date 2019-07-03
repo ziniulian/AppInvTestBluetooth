@@ -1,32 +1,3 @@
 <resources>
-
-    <string name="app_name">Invengo Demo</string>
-    <string name="app_name_XC2600">Invengo Demo For XC2600</string>
-    <string name="app_name_XC2910">Invengo Demo For XC2910</string>
-	<string name="hex_input_filter">0123456789ABCDEFabcdef</string>
-    
-	<string name="label_device_type_select_2600">XC2600</string>
-	<string name="label_device_type_select_2910">XC2910</string>
-	<string name="progress_bar_device_type_select_hint">Selecting&#8230;</string>
-	
-    <string name="device_error">Device Error</string>
-    <string name="filaed_to_device">The PDA is not equipped the module, or another Rfid App is running.</string>
-    <string name="unsupport_bluetooth_le">The PDA do not surpport BLE.</string>
-    <string name="filaed_to_connect">Reader connect failure.</string>
-    <string name="ok_button">YES</string>
-    <string name="no_button">NO</string>
-    <string name="device_notice">Device Notice</string>
-    <string name="message_shutdown_xc2600">Shutdown XC2600 Device?</string>
-    
-    <string name="toast_invengo_crash_info">Uncaught exception occur.App will exit!</string>
-    
-   	<string name="time_set">Set time</string>
-    <string name="cancel">Cancel</string>
-    <string name="time">Time : </string>
-    
-    <string name="title_reader_battery_manager">Reader Battery Manager</string>
-    <string name="title_reader_battery_quantity">Reader Electric Quantity {%s}</string>
-    
-   	<string name="toast_exit">Press back_key again to exit!</string>
-   	
+    <string name="app_name">BLT RFID Demo</string>
 </resources>
