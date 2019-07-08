@@ -1,6 +1,7 @@
 package com.invengo.test.bltrfiddemo;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -13,9 +14,11 @@ import com.invengo.test.bltrfiddemo.enums.EmUh;
 import com.invengo.test.bltrfiddemo.enums.EmUrl;
 
 import tk.ziniulian.util.Str;
+import tk.ziniulian.util.communication.Blutos.BlutosLE;
 
 public class Ma extends Activity {
 	private Web w = new Web(this);
+	private BlutosLE ble = new BlutosLE();
 	private WebView wv;
 	private Handler uh = new UiHandler();
 
@@ -35,20 +38,23 @@ public class Ma extends Activity {
 		sendUrl(EmUrl.Home);
 	}
 
-	/**************************  蓝牙测试 *****************/
-
-	/**************************  蓝牙测试 - End *****************/
+	@Override
+	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+		ble.bldActCb(requestCode, resultCode);
+		super.onActivityResult(requestCode, resultCode, data);
+	}
 
 	@Override
 	protected void onResume() {
 //		w.open();
-		w.testOpen();
+		w.initBLE(ble);
 		super.onResume();
 	}
 
 	@Override
 	protected void onPause() {
 //		w.close();
+		ble.closeDevice();
 		super.onPause();
 	}
 
@@ -56,7 +62,7 @@ public class Ma extends Activity {
 	protected void onDestroy() {
 //		w.close();
 //		w.closeDb();
-		w.testClose();
+		ble.closeDevice();
 		super.onDestroy();
 	}
 
