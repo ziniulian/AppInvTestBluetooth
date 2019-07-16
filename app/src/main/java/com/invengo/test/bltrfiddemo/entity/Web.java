@@ -1,103 +1,83 @@
 package com.invengo.test.bltrfiddemo.entity;
 
-import android.bluetooth.BluetoothDevice;
 import android.util.Log;
 import android.webkit.JavascriptInterface;
 
-import com.invengo.test.bltrfiddemo.Ma;
 import com.invengo.test.bltrfiddemo.enums.EmUrl;
 
-import tk.ziniulian.util.communication.Blutos.BlutosDev;
-import tk.ziniulian.util.communication.Blutos.BlutosLE;
-import tk.ziniulian.util.communication.Blutos.EmBlutos;
-import tk.ziniulian.util.communication.Blutos.InfBlutosEvt;
+import invengo.javaapi.communication.Ble;
+import invengo.javaapi.core.BaseReader;
+import invengo.javaapi.core.IMessageNotification;
+import invengo.javaapi.handle.IMessageNotificationReceivedHandle;
+import invengo.javaapi.protocol.IRP1.PowerOff;
+import invengo.javaapi.protocol.IRP1.RXD_TagData;
+import invengo.javaapi.protocol.IRP1.ReadTag;
+import invengo.javaapi.protocol.IRP1.Reader;
+import tk.ziniulian.util.webapp.WebHd;
 
 import static tk.ziniulian.util.Str.Bytes2Hexstr;
 
 /**
- * 业务接口
+ * 业务接口 不使用JOB库
  * Created by 李泽荣 on 2019/7/2.
  */
 
-public class Web {
-	private Ma ma;
-	private BlutosLE ble;
+public class Web implements IMessageNotificationReceivedHandle {
+	private WebHd h;
+	private Ble b;
+	private Reader rd;
 
-	public Web (Ma m) {
-		this.ma = m;
+	public Web (WebHd wh, Ble ble) {
+		this.h = wh;
+		this.b = ble;
 	}
 
-	public void  initBLE (BlutosLE b) {
-		this.ble = b;
-		InfBlutosEvt e = new InfBlutosEvt() {
+	public void  initRd () {
+		// 蓝牙连接事件处理
+		b.setOpenEvt(new Ble.OnBleOpenEvt() {
 			@Override
-			public void onBldOk(BlutosLE self) {
-				Log.i("----- 1. onBldOk -----", "onBldOk");
-
-				BluetoothDevice d = ble.getDev("CD:48:5F:69:D7:09");
-				ble.connectDevice(ma, d);
-
-//				ble.scanDevice();
+			public void onOpen(boolean ok) {
+				Log.i("---- open ----", "open : " + ok);
+				if (ok) {
+					// 跳转到连接OK的页面
+					h.sendUrl(EmUrl.RfConnected);
+				} else {
+					// TODO: 2019/7/9 跳转到选择连接的界面
+				}
 			}
+		});
 
-			@Override
-			public void onErr(BlutosLE self, EmBlutos msg) {
-				Log.i("----- 2. onErr -----", msg.toString());
-			}
-
-			@Override
-			public void onScanBegin(BlutosLE self) {
-				Log.i("--- 3. onScanBegin ---", "onScanBegin");
-			}
-
-			@Override
-			public void onScanOne(BlutosLE self, BlutosDev dev) {
-				Log.i("----- 4.onScanOne -----", dev.getD().getAddress() + " , " + dev.getD().getBondState());
-			}
-
-			@Override
-			public void onScanEnd(BlutosLE self) {
-				Log.i("--- 5. onScanEnd ---", self.jsonScanDevices());
-			}
-
-			@Override
-			public void onConnectBegin(BlutosLE self) {
-				Log.i("-- 6. onConnectBegin --", "onConnectBegin");
-			}
-
-			@Override
-			public void onConnected(BlutosLE self) {
-				Log.i("---- 9.onConnected ----", "onConnected");
-				ma.sendUrl(EmUrl.Test);
-			}
-
-			@Override
-			public void onDisConnected(BlutosLE self) {
-				Log.i("-- 10.onDisConnected --", "onDisConnected");
-			}
-
-			@Override
-			public void onReceive(BlutosLE self, byte[] dat) {
-				Log.i("---- 12. onReceive ----", Bytes2Hexstr(dat));
-			}
-		};
-		b.setEvt(e).bld(ma);
+		rd = new Reader("BLE", "CD:48:5F:69:D7:09", b);
+		rd.onMessageNotificationReceived.add(this);
 	}
 
-	@JavascriptInterface
-	public void testWrt (String hex) {
-		ble.wrt(hex);
+	public void open() {
+		rd.connect();
+	}
+
+	public void close() {
+		rd.disConnect();
 	}
 
 /*------------------- RFID ---------------------*/
 
-/*------------------- 数据库 ---------------------*/
-
-/*------------------- 其它 ---------------------*/
+	@Override
+	public void messageNotificationReceivedHandle(BaseReader reader, IMessageNotification msg) {
+		if (msg instanceof RXD_TagData) {
+			Log.i("---", Bytes2Hexstr(msg.getReceivedData()));
+		}
+	}
 
 	@JavascriptInterface
-	public void log(String msg) {
-		Log.i("---- Web ----", msg);
+	public void rfidScan () {
+		rd.send(new ReadTag (ReadTag.ReadMemoryBank.EPC_6C));
 	}
+
+	@JavascriptInterface
+	public void rfidStop () {
+		rd.send(new PowerOff());
+	}
+
+/*------------------- 数据库 ---------------------*/
 
 }

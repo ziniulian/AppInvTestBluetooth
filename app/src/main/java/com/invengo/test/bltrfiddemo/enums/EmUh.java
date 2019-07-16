@@ -6,6 +6,5 @@ package com.invengo.test.bltrfiddemo.enums;
  */
 
 public enum EmUh {
-	Url,
-	Connected
+	Url
 }

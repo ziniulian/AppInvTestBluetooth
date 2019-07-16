@@ -25,5 +25,10 @@ android {
 }
 
 dependencies {
-    compile files('libs/jar/Ziniulian/android/com/ziniulian.util_v0.0.2.jar')
+    compile files('libs/jar/My/android/com/ziniulian.util.jar')
+    compile files('libs/jar/Invengo/android/com/invengo.util.jar')
+    compile files('libs/jar/Invengo/android/com/invengo.system.device.jar')
+    compile files('libs/jar/Invengo/android/com/invengo.system.ctrl.jar')
+    compile files('libs/jar/Invengo/android/RFID/invengo.irp1.jar')
+    compile files('libs/jar/My/android/job/inv/ziniulian.job.inv.jar')
 }
