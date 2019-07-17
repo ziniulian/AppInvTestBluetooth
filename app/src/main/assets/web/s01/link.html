@@ -8,6 +8,7 @@
 		<link href="../css/base.css" rel="stylesheet" type="text/css" />
 		<link href="../css/s01.css" rel="stylesheet" type="text/css" />
 		<script src="../js/rfid.js"></script>
+		<script src="../js/link.js"></script>
 
 		<style type="text/css">
 		</style>
@@ -15,10 +16,8 @@
 
 	<body>
 		<div id="boso" class="boso Lc_noadr">
-			<div id="devsDom" class="barBody midOut bfs">
-				<br/><br/><br/><br/><br/>刷新中。。。
-			</div>
-			<div id="btnDom" class="Lc_nosee">
+			<div id="devsDom" class="barBody midOut bfs"></div>
+			<div id="btnDom" class="bar">
 				<div class="btn btn1" onclick="dat.scan();">
 					<div class="midTop"></div>
 					<div class="midSub mfs">刷新</div>
@@ -29,47 +28,6 @@
 	</body>
 
 	<script type="text/javascript">
-		document.body.onload = rfid.bleScan;
-		rfid.bleScanEnd = function (dev) {
-			dat.clearNan();
-			btnDom.className = "bar";
-		};
-		rfid.bleScanDev = function (dev) {
-			if (dev.typ === 2 && dev.rsi < -20) {
-				dat.clearNan();
-				var d = document.createElement("br");
-				devsDom.appendChild(d);
-				d = document.createElement("br");
-				devsDom.appendChild(d);
-				d = document.createElement("br");
-				devsDom.appendChild(d);
-				d = document.createElement("a");
-				d.href = "javascript: dat.link(\"" + dev.adr + "\");";
-				d.innerHTML = dev.adr;
-				if (dev.nam) {
-					d.innerHTML += " (" + dev.nam + ")";
-				}
-				devsDom.appendChild(d);
-			}
-		};
-		var dat = {
-			nan: true,
-			scan: function () {
-				btnDom.className = "Lc_nosee";
-				devsDom.innerHTML = "<br/><br/><br/><br/><br/>刷新中。。。";
-				dat.nan = true;
-				rfid.bleScan();
-			},
-			link: function (adr) {
-				rfid.setDev(adr);
-				window.location.href = "linking.html";
-			},
-			clearNan: function () {
-				if (dat.nan) {
-					devsDom.innerHTML = "";
-					dat.nan = false;
-				}
-			}
-		};
+		document.body.onload = dat.init;
 	</script>
 </html>

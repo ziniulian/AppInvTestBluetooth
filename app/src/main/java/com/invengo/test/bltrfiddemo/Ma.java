@@ -30,6 +30,16 @@ public class Ma extends Activity {
 
 		wv = (WebView)findViewById(R.id.wv);
 		init();
+
+		// 防止应用奔溃
+		Thread.setDefaultUncaughtExceptionHandler (new Thread.UncaughtExceptionHandler() {
+			@Override
+			public void uncaughtException(Thread thread, Throwable e) {
+				Log.i ("--- Crash ---", "-- S!");
+				e.printStackTrace();
+				Log.i ("--- Crash ---", "-- E!");
+			}
+		});
 	}
 
 	// 初始化
@@ -49,7 +59,6 @@ public class Ma extends Activity {
 		b.setCheckEvt(new Ble.OnBleCheckEvt() {
 			@Override
 			public void onCheck(boolean ok) {
-				Log.i("---- check ----", "check : " + ok);
 				if (ok) {
 					h.sendUrl(EmUrl.RfConnectErr);
 				} else {

@@ -57,6 +57,9 @@ rfid = {
 	bleScanEnd: function (devs) {	// 回调蓝牙设备扫描结束
 		LwaUtil.log("bleScanEnd");
 	},
+	getDev: function () {	// 获取上一次连接的设备
+		return LwaRfdo.getDevAdr ();
+	},
 	setDev: function (dev) {	// 设置要连接的设备
 		LwaRfdo.setDevAdr (dev);
 	}
