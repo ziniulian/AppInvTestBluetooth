@@ -3,7 +3,6 @@ package com.invengo.test.bltrfiddemo;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.KeyEvent;
 import android.webkit.WebView;
 
@@ -11,6 +10,7 @@ import com.invengo.test.bltrfiddemo.enums.EmUh;
 import com.invengo.test.bltrfiddemo.enums.EmUrl;
 
 import invengo.javaapi.communication.Ble;
+import tk.ziniulian.job.inv.rfid.tag.T6CbigPaper;
 import tk.ziniulian.job.inv.webapp.WebiRfidBle;
 import tk.ziniulian.util.EnumMgr;
 import tk.ziniulian.util.webapp.WebHd;
@@ -31,15 +31,15 @@ public class Ma extends Activity {
 		wv = (WebView)findViewById(R.id.wv);
 		init();
 
-		// 防止应用奔溃
-		Thread.setDefaultUncaughtExceptionHandler (new Thread.UncaughtExceptionHandler() {
-			@Override
-			public void uncaughtException(Thread thread, Throwable e) {
-				Log.i ("--- Crash ---", "-- S!");
-				e.printStackTrace();
-				Log.i ("--- Crash ---", "-- E!");
-			}
-		});
+//		// 防止应用奔溃
+//		Thread.setDefaultUncaughtExceptionHandler (new Thread.UncaughtExceptionHandler() {
+//			@Override
+//			public void uncaughtException(Thread thread, Throwable e) {
+//				Log.i ("--- Crash ---", "-- S!");
+//				e.printStackTrace();
+//				Log.i ("--- Crash ---", "-- E!");
+//			}
+//		});
 	}
 
 	// 初始化
@@ -69,6 +69,7 @@ public class Ma extends Activity {
 
 		// 初始化RFID模块
 		w.initRd();
+		w.getRd().setTagc(T6CbigPaper.class);	// 修改标签类型
 
 		// 开始检查蓝牙设备
 		b.check();

@@ -1,6 +1,7 @@
 function init() {
 	// dat.crtTag({ "epc": "aaa", "tim": 5, tid: "ttttt" });  // 测试
-	rfid.setBank("tid");
+	// rfid.setBank("tid");
+	rfid.setBank("use");
 }
 
 rfid.hdScan = function (arr) {
@@ -52,7 +53,7 @@ dat = {
 		r.dom.appendChild(d);
 		r.dom.appendChild(r.delDom);
 
-		r.epcDom.innerHTML = o.tid;
+		r.epcDom.innerHTML = o.epc + "<br/><br/>" + o.tid + "<br/><br/>" + o.use;
 		r.timDom.innerHTML = r.tim;
 		r.delDom.innerHTML = "<a href=\"javascript:dat.delTag('" + o.tid + "');\">删除</a>";
 		tago.appendChild(r.dom);
