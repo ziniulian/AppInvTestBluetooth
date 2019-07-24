@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <string name="title_tag_scan">Scan</string>
+    
+    <string name="label_tag_scan_type_6c">6C Tag</string>
+    <string name="label_tag_scan_type_6b">6B Tag</string>
+    <string name="label_tag_scan_type_gb">GB Tag</string>
+    <string name="label_tag_scan_times">Times:</string>
+    <string name="label_tag_scan_epc">EPC:</string>
+    <string name="label_tag_scan_tid">TID:</string>
+    <string name="label_tag_scan_userdata">UserData:</string>
+    <string name="label_tag_scan_rssi">RSSI:</string>
+    <string name="label_tag_scan_utc">UTC:</string>
+    
+    <string name="menu_tag_scan_detail_start_title">Start</string>
+    <string name="menu_tag_scan_detail_stop_title">Stop</string>
+    <string name="menu_tag_scan_detail_clear_title">Clear</string>
+    
+    <string name="toast_tag_scan_gb_unsupport">Unsupport!</string>
+    <string name="toast_tag_scan_start">Start scan tag!</string>
+    <string name="toast_tag_scan_stop">Stop scan tag!</string>
+    <string name="toast_barcode_scan_start">Start scan barcode!</string>
+    <string name="toast_barcode_scan_stop">Stop scan barcode!</string>
+    <string name="label_barcode_scan_type">barcode</string>
+    <string name="label_barcode_scan_barcode">Barcode Data:</string>
+    
+   	<string name="text_tag_scan_empty">Empty!</string>
+</resources>

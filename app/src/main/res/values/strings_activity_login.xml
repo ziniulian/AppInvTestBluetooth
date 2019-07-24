@@ -1,0 +1,33 @@
+<resources>
+
+    <string name="menu_forgot_password">Recover lost password</string>
+
+    <!-- Login Activity -->
+    <string name="device_name">Bluetooth Device Name</string>
+    <string name="reader_name">RFID Reader Name</string>
+    <string name="default_reader_name">Reader</string>
+    <string name="reader_name_hint">Reader name!</string>
+    <string name="check_rfid_label">RFID</string>
+    <string name="check_1d2d_label">1D2D</string>
+    <string name="label_tag_scan_number">Number</string>
+    <string name="action_connect">Connect</string>
+    <string name="action_quit">Quit</string>
+    <string name="device_not_found">Bluetooth is closed.Device Not Found</string>
+	<string name="alert_dialog_title">Bluetooth Not Open</string>
+    <string name="alert_dialog_message">Bluetooth is closed.Open now? </string>
+    <string name="alert_dialog_button_yes">YES</string>
+    <string name="alert_dialog_button_NO">NO</string>
+    <string name="progress_bar_hint">Connecting&#8230;</string>
+    
+    <string name="toast_bluetooth_open">Bluetooth Open!</string>
+    <string name="toast_bluetooth_close">Bluetooth is closed!</string>
+    <string name="toast_bluetooth_connect">Bluetooth Device Connected!</string>
+    <string name="toast_bluetooth_disconnect">Bluetooth Device Disonnected!</string>
+    <string name="toast_bluetooth_bound">No-bound device!</string>
+    <string name="toast_name_empty">Name Empty!</string>
+    <string name="toast_bluetooth_rename">The name exists!</string>
+    <string name="toast_connect_failure">Connect Reader Failure!</string>
+    <string name="toast_channel_open_failure_connect_failure">RFID or 1D2D channel open failure.Connect Reader Failure!</string>
+    
+
+</resources>

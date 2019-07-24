@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_gb_access_read_parameter"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:visibility="gone"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="5dp"
+        android:gravity="center_vertical" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="@string/label_gb_access_read_parameter_password" />
+
+        <EditText
+            android:id="@+id/edit_gb_access_read_parameter_password"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3.3"
+            android:background="@drawable/text_background"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="@string/hint_gb_access_read_parameter_password"
+            android:inputType="numberPassword"
+            android:text="00000000" >
+
+            <requestFocus />
+        </EditText>
+
+        <ToggleButton
+            android:id="@+id/toggle_button_eye_visibility_gb_access_read_parameter_password"
+            android:layout_width="0dp"
+            android:layout_weight="0.7"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/button_visibility_background"
+            android:gravity="center"
+            android:minHeight="@null"
+            android:minWidth="@null"
+            android:text="@null"
+            android:textOff="@null"
+            android:textOn="@null" />
+    </LinearLayout>
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="5dp"
+        android:gravity="center_vertical" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="@string/label_gb_access_read_parameter_address" />
+
+        <EditText
+            android:id="@+id/edit_gb_access_read_parameter_address"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:layout_weight="4"
+            android:background="@drawable/text_background"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="@string/hint_gb_access_read_parameter_address"
+            android:inputType="number" >
+        </EditText>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="5dp"
+        android:gravity="center_vertical" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="@string/label_gb_access_read_parameter_len" />
+
+        <EditText
+            android:id="@+id/edit_gb_access_read_parameter_len"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:layout_weight="4"
+            android:background="@drawable/text_background"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="@string/hint_gb_access_read_parameter_len"
+            android:inputType="number" >
+        </EditText>
+    </LinearLayout>
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="5dp"
+    	android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="@string/label_gb_access_read_parameter_bank" />
+
+        <RadioGroup
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <RadioButton
+                android:id="@+id/radio_gb_access_read_parameter_epc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="@string/label_radio_gb_access_read_parameter_epc" />
+
+            <RadioButton
+                android:id="@+id/radio_gb_access_read_parameter_tid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_radio_gb_access_read_parameter_tid" />
+
+            <RadioButton
+                android:id="@+id/radio_gb_access_read_parameter_userdata"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_radio_gb_access_read_parameter_userdata" />
+        </RadioGroup>
+
+        <!-- 
+        <Spinner
+            android:id="@+id/spinner_gb_access_read_parameter_bank_id"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:layout_weight="4"
+            android:background="@drawable/text_background"
+            android:gravity="center" />
+		 -->
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_gb_access_read_parameter_userdata_num"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="5dp"
+        android:visibility="gone"
+        android:gravity="center_vertical" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="@string/label_gb_access_read_parameter_userdata_num" />
+
+        <EditText
+            android:id="@+id/edit_gb_access_read_parameter_userdata_num"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:layout_weight="4"
+            android:background="@drawable/text_background"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="@string/hint_gb_access_read_parameter_userdata_num"
+            android:inputType="number" >
+        </EditText>
+    </LinearLayout>
+    
+    <ImageView
+	        android:layout_width="match_parent"
+	        android:layout_height="1dp"
+	        android:background="#808040"
+	        android:layout_marginBottom="15dp"
+	        android:contentDescription="@string/image_connect_status_description" />
+
+</LinearLayout>

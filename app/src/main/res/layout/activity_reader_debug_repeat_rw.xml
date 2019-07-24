@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    
+    <include layout="@layout/progress_bar_status"/>
+    
+	<ScrollView 
+	    android:id="@+id/content_reader_debug_repeat_rw_id"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:scrollbarThumbVertical="@drawable/scrollview_thumb_color" >
+	    
+		<LinearLayout
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:orientation="vertical" >
+		
+		    <include layout="@layout/layout_tag_operation_match_params"/>
+		  
+		    <RelativeLayout
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:gravity="center_vertical"
+		        android:layout_marginBottom="5dp"
+		        android:layout_marginRight="5dp" >
+		
+		        <RadioGroup
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_centerVertical="true"
+		            android:orientation="horizontal"
+		       	    android:layout_marginLeft="10dp"
+		            android:layout_alignParentRight="true" >
+		
+		            <RadioButton
+		                android:id="@+id/radio_reader_debug_repeat_rw_read"
+		                android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"
+		               	android:checked="true"
+		                android:text="@string/lable_reader_debug_repeat_rw_read" />
+		
+		            <RadioButton
+		                android:id="@+id/radio_reader_debug_repeat_rw_write"
+		                android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"
+		                android:text="@string/lable_reader_debug_repeat_rw_write" />
+		
+		        </RadioGroup>
+		    </RelativeLayout>
+		    
+		    <RelativeLayout
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:gravity="center_vertical"
+		        android:layout_marginLeft="5dp"
+		        android:layout_marginBottom="15dp"
+		        android:layout_marginRight="5dp" >
+		
+		        <TextView
+		            android:id="@+id/text_reader_debug_repeat_rw_type"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_alignParentLeft="true"
+		            android:layout_centerVertical="true"
+		            android:text="@string/label_reader_debug_repeat_rw_type" >
+		        </TextView>
+		
+		        <RadioGroup
+		            android:id="@+id/opTypeRadioGroup"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_centerVertical="true"
+		            android:orientation="horizontal"
+		       	    android:layout_marginLeft="10dp"
+		            android:layout_alignParentRight="true" >
+		
+		            <RadioButton
+		                android:id="@+id/radio_reader_debug_repeat_rw_epc"
+		                android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"
+		                android:checked="false"
+		                android:enabled="false"
+		                android:text="@string/lable_reader_debug_repeat_rw_epc" />
+		
+		            <RadioButton
+		                android:id="@+id/radio_reader_debug_repeat_rw_userdata"
+		                android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"
+		                android:checked="true"
+		                android:text="@string/lable_reader_debug_repeat_rw_userdata" />
+		
+		        </RadioGroup>
+		    </RelativeLayout>
+		   
+		    <LinearLayout
+		        android:layout_marginLeft="5dp"
+		        android:layout_marginBottom="15dp"
+		        android:gravity="center_vertical"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content" >
+		
+		        <TextView
+		            android:layout_width="0dp"
+		            android:layout_weight="1"
+		            android:layout_height="wrap_content"
+		            android:text="@string/label_reader_debug_repeat_rw_password" />
+		
+		        <EditText
+		            android:id="@+id/edit_reader_debug_repeat_rw_pwd"
+		            android:layout_marginRight="5dp"
+		            android:layout_width="0dp"
+		            android:layout_weight="3"
+		            android:layout_height="wrap_content"
+					android:gravity="center"
+		            android:inputType="text"
+		            android:digits="@string/hex_input_filter"
+		            android:hint="@string/hint_reader_debug_repeat_rw_password"
+		            android:background="@drawable/text_background"
+		            android:text="00000000"
+		            android:ems="10" >
+		
+		            <requestFocus />
+		        </EditText>
+		        <!-- 
+		        <ToggleButton 
+		            android:id="@+id/toggle_button_eye_visibility_repeat_rw"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:background="@drawable/button_visibility_background"
+		            android:layout_marginRight="5dp"
+		            android:gravity="center"
+		            android:text="@null"
+		            android:textOn="@null"
+		            android:textOff="@null"
+		            android:minWidth="@null"
+		            android:minHeight="@null"/>
+		 		-->
+		    </LinearLayout>
+		    
+		    <LinearLayout
+		        android:layout_marginLeft="5dp"
+		        android:layout_marginBottom="15dp"
+		        android:gravity="center_vertical"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content" >
+		
+		        <TextView
+		            android:layout_width="0dp"
+		            android:layout_weight="1"
+		            android:layout_height="wrap_content"
+		            android:text="@string/label_reader_debug_repeat_rw_address" />
+		
+		        <EditText
+		            android:id="@+id/edit_reader_debug_repeat_rw_address"
+		            android:layout_width="0dp"
+		            android:layout_weight="3"
+		            android:layout_height="wrap_content"
+					android:gravity="center"
+		            android:inputType="number"
+		            android:layout_marginRight="5dp"
+		            android:text="0"
+		            android:hint="@string/hint_reader_debug_repeat_rw_address"
+		            android:background="@drawable/text_background"
+		            android:ems="10" >
+		        </EditText>
+		        
+		    </LinearLayout>
+		    
+		    <LinearLayout
+		        android:layout_marginLeft="5dp"
+		        android:layout_marginBottom="15dp"
+		        android:gravity="center_vertical"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content" >
+		
+		        <TextView
+		            android:layout_width="0dp"
+		            android:layout_weight="1"
+		            android:layout_height="wrap_content"
+		            android:text="@string/label_reader_debug_repeat_rw_len" />
+		
+		        <EditText
+		            android:id="@+id/edit_reader_debug_repeat_rw_len"
+		            android:layout_width="0dp"
+		            android:layout_weight="3"
+		            android:layout_height="wrap_content"
+					android:gravity="center"
+		            android:inputType="number"
+		            android:layout_marginRight="5dp"
+		            android:text="6"
+		            android:hint="@string/hint_reader_debug_repeat_rw_len"
+		            android:background="@drawable/text_background"
+		            android:ems="10" >
+		        </EditText>
+		        
+		    </LinearLayout>
+
+		    <LinearLayout
+		        android:layout_marginLeft="5dp"
+		        android:layout_marginBottom="15dp"
+		        android:gravity="center_vertical"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content" >
+		
+		        <TextView
+		            android:layout_width="0dp"
+		            android:layout_weight="1"
+		            android:layout_height="wrap_content"
+		            android:text="@string/label_reader_debug_repeat_rw_times" />
+		
+		        <EditText
+		            android:id="@+id/edit_reader_debug_repeat_rw_times"
+		            android:layout_width="0dp"
+		            android:layout_weight="3"
+		            android:layout_height="wrap_content"
+					android:gravity="center"
+		            android:inputType="number"
+		            android:layout_marginRight="5dp"
+		            android:hint="@string/hint_reader_debug_repeat_rw_times"
+		            android:background="@drawable/text_background"
+		            android:text="10"
+		            android:ems="10" >
+		        </EditText>
+		        
+		    </LinearLayout>
+		    		    
+		    <LinearLayout
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:gravity="center_vertical"
+		        android:orientation="vertical" >
+		        
+		        <TextView
+		            android:layout_width="match_parent"
+		            android:layout_height="wrap_content"
+			        android:layout_marginLeft="5dp"
+		            android:text="@string/label_reader_debug_repeat_rw_data" />
+		
+		        <EditText
+		            android:id="@+id/edit_reader_debug_repeat_rw_data"
+		            android:layout_width="match_parent"
+		            android:layout_height="wrap_content"
+					android:gravity="top|left"
+		            android:layout_marginLeft="5dp"
+		            android:layout_marginRight="5dp"
+		            android:inputType="textMultiLine"
+		            android:background="@drawable/text_background"
+		            android:minLines="10"
+		            android:scrollbars="vertical"
+		            android:textColor="@android:color/holo_blue_dark"
+		            android:enabled="false"
+		            android:ems="10" >
+		        </EditText>
+		        
+		    </LinearLayout>
+		</LinearLayout>
+    </ScrollView>
+</FrameLayout>

@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" >
+
+    <include layout="@layout/progress_bar_status" />
+
+    <ScrollView 
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:scrollbarThumbVertical="@drawable/scrollview_thumb_color"
+		>
+	    <LinearLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="vertical" >
+	
+	        <include layout="@layout/layout_tag_operation_match_params" />
+	
+	        <LinearLayout
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+		        android:gravity="center_vertical"
+	            android:layout_marginBottom="15dp"
+	            android:layout_marginLeft="5dp" >
+	
+	            <TextView
+	                android:layout_width="0dp"
+	                android:layout_height="wrap_content"
+	                android:layout_weight="1"
+	                android:text="@string/label_tag_operation_bank_password" />
+	
+	            <EditText
+	                android:id="@+id/edit_tag_operation_write_bank_password"
+	                android:layout_width="0dp"
+	                android:layout_height="wrap_content"
+	                android:layout_weight="3"
+	                android:background="@drawable/text_background"
+	                android:ems="10"
+	                android:gravity="center"
+	                android:hint="@string/hint_tag_operation_bank_password"
+	                android:inputType="textPassword"
+	                android:digits="@string/hex_input_filter"
+	                android:text="00000000" >
+	
+	                <requestFocus />
+	            </EditText>
+	            
+		        <ToggleButton 
+		            android:id="@+id/toggle_button_eye_visibility_write_bank"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:background="@drawable/button_visibility_background"
+		            android:layout_marginRight="5dp"
+		            android:gravity="center"
+		            android:text="@null"
+		            android:textOn="@null"
+		            android:textOff="@null"
+		            android:minWidth="@null"
+		            android:minHeight="@null"/>
+	        </LinearLayout>
+		    
+		    <LinearLayout
+		        android:layout_marginLeft="5dp"
+		        android:layout_marginBottom="15dp"
+		        android:gravity="center_vertical"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content" >
+		
+		        <TextView
+		            android:layout_width="0dp"
+		            android:layout_weight="1"
+		            android:layout_height="wrap_content"
+		            android:text="@string/label_tag_operation_bank_area" />
+	
+		        <RadioGroup
+		            android:layout_width="0dp"
+		            android:layout_height="wrap_content"
+		            android:orientation="horizontal"
+		            android:layout_marginRight="5dp"
+		            android:layout_weight="3" >
+	
+		            <RadioButton
+		                android:id="@+id/radio_tag_operation_write_bank_area_epc"
+		                android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"
+		                android:checked="true"
+		                android:text="@string/label_radio_tag_operation_bank_area_epc" />
+	
+		            <RadioButton
+		                android:id="@+id/radio_tag_operation_write_bank_area_tid"
+		                android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"
+		                android:text="@string/label_radio_tag_operation_bank_area_tid" />
+	
+		            <RadioButton
+		                android:id="@+id/radio_tag_operation_write_bank_area_usedata"
+		                android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"
+		                android:text="@string/label_radio_tag_operation_bank_area_userdata" />
+	
+		        </RadioGroup>
+		        
+		    </LinearLayout>
+		    
+		    <LinearLayout
+		        android:layout_marginLeft="5dp"
+		        android:layout_marginBottom="15dp"
+		        android:gravity="center_vertical"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content" >
+		
+		        <TextView
+		            android:layout_width="0dp"
+		            android:layout_weight="1"
+		            android:layout_height="wrap_content"
+		            android:text="@string/label_tag_operation_bank_address" />
+		
+		        <EditText
+		            android:id="@+id/edit_tag_operation_write_bank_address"
+		            android:layout_width="0dp"
+		            android:layout_weight="3"
+		            android:layout_height="wrap_content"
+					android:gravity="center"
+		            android:inputType="number"
+		            android:layout_marginRight="5dp"
+		            android:hint="@string/hint_tag_operation_bank_address"
+		            android:background="@drawable/text_background"
+		            android:ems="10" >
+		        </EditText>
+		        
+		    </LinearLayout>
+		    
+		    <LinearLayout
+		        android:layout_marginLeft="5dp"
+		        android:layout_marginBottom="15dp"
+		        android:gravity="center_vertical"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content" >
+		
+		        <TextView
+		            android:layout_width="0dp"
+		            android:layout_weight="1"
+		            android:layout_height="wrap_content"
+		            android:text="@string/label_tag_operation_bank_len" />
+		
+		        <EditText
+		            android:id="@+id/edit_tag_operation_write_bank_len"
+		            android:layout_width="0dp"
+		            android:layout_weight="3"
+		            android:layout_height="wrap_content"
+					android:gravity="center"
+		            android:inputType="number"
+		            android:layout_marginRight="5dp"
+		            android:hint="@string/hint_tag_operation_bank_len"
+		            android:background="@drawable/text_background"
+		            android:ems="10" >
+		        </EditText>
+		        
+		    </LinearLayout>
+		    
+		    <LinearLayout
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:gravity="center_vertical"
+		        android:orientation="vertical" >
+		        
+		        <TextView
+		            android:layout_width="match_parent"
+		            android:layout_height="wrap_content"
+			        android:layout_marginLeft="5dp"
+		            android:text="@string/label_tag_operation_write_bank_data" />
+		
+		        <EditText
+		            android:id="@+id/edit_tag_operation_write_bank_data"
+		            android:layout_width="match_parent"
+		            android:layout_height="wrap_content"
+					android:gravity="top|left"
+		            android:layout_marginLeft="5dp"
+		            android:layout_marginRight="5dp"
+		            android:inputType="textMultiLine"
+		            android:hint="@string/hint_tag_operation_write_bank_data"
+		            android:background="@drawable/text_background"
+		            android:minLines="3"
+		            android:maxLines="5"
+		            android:scrollbars="vertical"
+	                android:digits="@string/hex_input_filter"
+		            android:ems="10" >
+		        </EditText>
+		        
+		    </LinearLayout>
+		</LinearLayout>
+    </ScrollView>
+</merge>
