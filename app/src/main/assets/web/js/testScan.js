@@ -1,6 +1,6 @@
 function init() {
 	// dat.crtTag({ "epc": "aaa", "tim": 5, tid: "ttttt" });  // 测试
-	// rfid.setBank("tid");
+	// rfid.setBank("epc");
 	rfid.setBank("use");
 }
 
