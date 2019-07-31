@@ -12,7 +12,7 @@
     <string name="label_tag_scan_userdata">UserData:</string>
     <string name="label_tag_scan_rssi">RSSI:</string>
     <string name="label_tag_scan_utc">UTC:</string>
-    
+
     <string name="menu_tag_scan_detail_start_title">Start</string>
     <string name="menu_tag_scan_detail_stop_title">Stop</string>
     <string name="menu_tag_scan_detail_clear_title">Clear</string>

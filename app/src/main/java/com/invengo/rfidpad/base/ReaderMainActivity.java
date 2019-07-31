@@ -160,6 +160,7 @@ public class ReaderMainActivity extends AbstractBaseActivity {
 	 */
 
 	private boolean mIsBLE = false;//for Hand-Ring Reader.false-non BLE,true-BLE
+	private String devpow = "100";	// 电量
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -176,6 +177,7 @@ public class ReaderMainActivity extends AbstractBaseActivity {
 		mSettingsCollection = TagScanSettingsCollection.getInstance();
 		mVoiceManager = VoiceManager.getInstance(getApplicationContext());
 		mReaderHolder = ReaderHolder.getInstance();
+		mReaderHolder.setConnected(false);
 		mDeviceType = mReaderHolder.getDeviceType();
 		mExecutorService = Executors.newFixedThreadPool(5);
 
@@ -392,9 +394,10 @@ public class ReaderMainActivity extends AbstractBaseActivity {
 	private Menu mOperationMenu;
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
-		InvengoLog.i(TAG, "INFO.onCreateOptionsMenu()");
+//		InvengoLog.i(TAG, "INFO.onCreateOptionsMenu()");
 		this.mOperationMenu = menu;
 		getMenuInflater().inflate(R.menu.menu_tag_scan_detail, menu);
+		flushPow();
 		return true;
 	}
 
@@ -693,6 +696,7 @@ public class ReaderMainActivity extends AbstractBaseActivity {
 			if(mReaderHolder.isConnected()){
 				mReaderHolder.disConnect();
 			}
+			// unregisterReaderConnectBroadcastReceiver();
 			finish();
 		}
 	}
@@ -710,6 +714,7 @@ public class ReaderMainActivity extends AbstractBaseActivity {
 	private static final int TIMER_RESPONSE = 10;
 	private static final int MENUITEM_UPDATE = 11;
 	private static final int EXIT = 12;
+	private static final int DEVPOW = 13;
 	private Handler readerHandler = new Handler(){
 		public void handleMessage(Message msg) {
 			int what = msg.what;
@@ -1022,6 +1027,9 @@ public class ReaderMainActivity extends AbstractBaseActivity {
 					}
 					((TagInfoArrayAdapter)mTagInfoListView.getAdapter()).notifyDataSetChanged();
 					break;
+				case DEVPOW:
+					 mOperationMenu.findItem(R.id.menu_tag_scan_detail_devpow).setIcon(getResources().getIdentifier("stat_sys_battery_" + devpow, "drawable", getPackageName()));
+					break;
 				case QUERY_RSSI:
 					boolean result = (Boolean) msg.obj;
 					mSettingsCollection.setRssi(result);
@@ -1159,7 +1167,7 @@ public class ReaderMainActivity extends AbstractBaseActivity {
 		DebugManager.clearSettings();
 		//		removeReaderCallback();
 
-		//		unregisterReaderConnectBroadcastReceiver();
+		unregisterReaderConnectBroadcastReceiver();
 		InvengoLog.shutdown();
 		super.cancelNotificationMessage();//暂时正常退出才能关闭Notification
 		super.onDestroy();
@@ -1273,13 +1281,15 @@ public class ReaderMainActivity extends AbstractBaseActivity {
 		@Override
 		public void onReceive(Context context, Intent intent) {
 			String result = intent.getStringExtra(NAME);
-			Log.i(getLocalClassName(), "onReceive()." + result + this.hashCode());
-			//			if(BLUETOOTH_ON.equals(result)){
-			//				showToast(getString(R.string.toast_bluetooth_open));
-			//			}else if(BLUETOOTH_OFF.equals(result)){
-			//				showToast(getString(R.string.toast_bluetooth_close));
-			//			}else
-			if(BLUETOOTH_CONNECTED.equals(result)){
+//			Log.i(getLocalClassName(), "onReceive()." + result + this.hashCode());
+//			if(BLUETOOTH_ON.equals(result)){
+//				showToast(getString(R.string.toast_bluetooth_open));
+//			}else if(BLUETOOTH_OFF.equals(result)){
+//				showToast(getString(R.string.toast_bluetooth_close));
+//			}else
+			if (result.startsWith("pow_")) {
+				flushPow(result.substring(4));
+			} else if(BLUETOOTH_CONNECTED.equals(result)){
 				Message connectMsg = new Message();
 				connectMsg.what = CONNECTED;
 				connectMsg.obj = true;
@@ -2234,6 +2244,18 @@ public class ReaderMainActivity extends AbstractBaseActivity {
 				}
 			}
 		}).start();
+	}
+
+	// 刷新电量
+	private void flushPow (String p) {
+//Log.i("--- pow ---", p);
+		if (!devpow.equals(p)) {
+			devpow = p;
+			flushPow ();
+		}
+	}
+	private void flushPow () {
+		readerHandler.sendMessage(readerHandler.obtainMessage(DEVPOW));
 	}
 
 }

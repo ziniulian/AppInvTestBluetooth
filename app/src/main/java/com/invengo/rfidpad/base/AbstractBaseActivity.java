@@ -18,6 +18,7 @@ public abstract class AbstractBaseActivity extends PowerManagerActivity {
 	private IntentFilter mAclDisconnectFilter;
 	private IntentFilter mBleConnectFilter;
 	private IntentFilter mBleDisconnectFilter;
+	private IntentFilter mBleDevPowFilter;
 	private BluetoothChangeReceiver mBluetoothChangeReceiver;
 	public static final String NAME = "BROADCAST_RESULT";
 	public static final String BLUETOOTH_ON = "BLUETOOTH_ON";
@@ -50,15 +51,16 @@ public abstract class AbstractBaseActivity extends PowerManagerActivity {
 		mAclDisconnectFilter = new IntentFilter(BluetoothDevice.ACTION_ACL_DISCONNECTED);
 		mBleConnectFilter = new IntentFilter(BaseReader.ACTION_READER_CONNECTED);
 		mBleDisconnectFilter = new IntentFilter(BaseReader.ACTION_READER_DISCONNECTED);
+		mBleDevPowFilter = new IntentFilter(BaseReader.ACTION_READER_DEVPOW);
 //		mAclConnectFilter = new IntentFilter(BaseReader.ACTION_READER_CONNECTED);
 //		mAclDisconnectFilter = new IntentFilter(BaseReader.ACTION_READER_DISCONNECTED);
 		mBluetoothChangeReceiver = new BluetoothChangeReceiver();
 		registerReceiver(mBluetoothChangeReceiver, mStateChangeFilter);
 		registerReceiver(mBluetoothChangeReceiver, mAclConnectFilter);
 		registerReceiver(mBluetoothChangeReceiver, mAclDisconnectFilter);
+		registerReceiver(mBluetoothChangeReceiver, mBleDevPowFilter);
 		registerReceiver(mBluetoothChangeReceiver, mBleConnectFilter);
 		registerReceiver(mBluetoothChangeReceiver, mBleDisconnectFilter);
-
 	}
 	
 	/**
@@ -80,6 +82,9 @@ public abstract class AbstractBaseActivity extends PowerManagerActivity {
 				}else if(mAdapter.getState() == BluetoothAdapter.STATE_OFF){
 					result = BLUETOOTH_OFF;
 				}
+			} else if (BaseReader.ACTION_READER_DEVPOW.equals(action)) {
+				result = "pow_" + intent.getStringExtra("pow");
+//				Log.i("AbstractBaseActivity", "pow : " + result);
 			}else if(BluetoothDevice.ACTION_ACL_CONNECTED.equals(action)){//low-level connect device,only when actually connecting the bluetoothLE device
 				result = BLUETOOTH_CONNECTED;
 				Log.i("AbstractBaseActivity", BLUETOOTH_CONNECTED);
