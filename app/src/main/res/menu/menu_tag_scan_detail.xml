@@ -2,8 +2,7 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android" >
     <item android:id="@+id/menu_tag_scan_detail_devpow"
           android:showAsAction="ifRoom"
-          android:enabled="false"
-          android:icon="@drawable/stat_sys_battery_100"/>
+          android:enabled="false"/>
     <item android:id="@+id/menu_tag_scan_detail_start"
         android:showAsAction="ifRoom"
         android:title="@string/menu_tag_scan_detail_start_title"/>

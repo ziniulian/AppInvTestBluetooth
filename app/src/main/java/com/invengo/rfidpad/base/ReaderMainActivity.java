@@ -160,7 +160,9 @@ public class ReaderMainActivity extends AbstractBaseActivity {
 	 */
 
 	private boolean mIsBLE = false;//for Hand-Ring Reader.false-non BLE,true-BLE
-	private String devpow = "100";	// 电量
+	private int devpow = -1;	// 显示的电量值
+	private int devpowTv = -1;	// 电量的实际值
+	private int devpowWait = 1;	// 等待电量信息稳定的标记
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -190,6 +192,8 @@ public class ReaderMainActivity extends AbstractBaseActivity {
 			registerReaderConnectBroadcastReceiver();
 		}
 		//		attemptQueryRssi();
+
+		powT.start();	// 启动电量渐变线程
 	}
 
 	/**
@@ -1168,6 +1172,8 @@ public class ReaderMainActivity extends AbstractBaseActivity {
 		//		removeReaderCallback();
 
 		unregisterReaderConnectBroadcastReceiver();
+		powT.interrupt();	// 关闭电量渐变线程
+
 		InvengoLog.shutdown();
 		super.cancelNotificationMessage();//暂时正常退出才能关闭Notification
 		super.onDestroy();
@@ -1288,7 +1294,7 @@ public class ReaderMainActivity extends AbstractBaseActivity {
 //				showToast(getString(R.string.toast_bluetooth_close));
 //			}else
 			if (result.startsWith("pow_")) {
-				flushPow(result.substring(4));
+				flushPow(Integer.parseInt(result.substring(4)));
 			} else if(BLUETOOTH_CONNECTED.equals(result)){
 				Message connectMsg = new Message();
 				connectMsg.what = CONNECTED;
@@ -2247,15 +2253,40 @@ public class ReaderMainActivity extends AbstractBaseActivity {
 	}
 
 	// 刷新电量
-	private void flushPow (String p) {
-//Log.i("--- pow ---", p);
-		if (!devpow.equals(p)) {
+	private void flushPow (int p) {
+		devpowTv = p;
+//Log.i("-----", p + ",");
+		if (devpowWait > 0) {
 			devpow = p;
 			flushPow ();
 		}
 	}
 	private void flushPow () {
-		readerHandler.sendMessage(readerHandler.obtainMessage(DEVPOW));
+		if (devpow > -1) {
+			readerHandler.sendMessage(readerHandler.obtainMessage(DEVPOW));
+		}
 	}
 
+	// 逐步变化的电量线程
+	private Thread powT = new Thread() {
+		@Override
+		public void run() {
+			try {
+				while (!isInterrupted()) {
+					Thread.sleep(3000);
+//Log.i("--- powT ---", devpow + " , " + reading + " , " + devpowTv + " , " + devpowWait);
+					if (devpowWait > 0) {
+						devpowWait --;
+					} else if (!reading && devpow != devpowTv) {
+						if (devpow > devpowTv) {
+							devpow --;
+						} else if (devpow < devpowTv) {
+							devpow ++;
+						}
+						flushPow ();
+					}
+				}
+			} catch (Exception e) {}
+		}
+	};
 }
